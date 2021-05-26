@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    Digite o dia do depósito: <input id="in_dias">
+    <br>
+    Digite o valor depositado: <input id="in_deposito">
+    <br>
+    <button onclick="guarda()">Guardar</button>
+    <br>
+    <br>
+    Digite o primeiro dia do intervalo que gostaria de analisar: <input id="in_intervaloInicial">
+    <br>
+    Digite o segundo dia do intervalo que gostaria de analisar: <input id="in_intervaloFinal">
+    <br>
+    <button onclick="reveDepositos()">Rever Depósitos</button>
+    <br>
+    <br>
+    <div id="div_deposito"></div>
+</body>
+
+</html>
+
+<script>
+    var listaDias = [];
+    var listaDepositos = [];
+    var aux = 1;
+
+    function guarda() {
+        listaDias.push(in_dias.value);
+        listaDepositos.push(in_deposito.value);
+
+        in_dias.value = "";
+        in_deposito.value = "";
+    }
+
+    function reveDepositos() {
+        div_deposito.innerHTML = "";
+        var intervaloInicial = in_intervaloInicial.value;
+        var intervaloFinal = in_intervaloFinal.value;
+
+        in_intervaloInicial.value = "";
+        in_intervaloFinal.value = "";
+
+        for (var contador = 0; contador < intervaloFinal; contador++) {
+            if (intervaloInicial <= listaDias[contador] && listaDias[contador] <= intervaloFinal) {
+                if ((aux % 2) == 1) {
+                    div_deposito.innerHTML += `<span style="color: blue;">Dia ${listaDias[contador]} - Valor depositado = R$ ${listaDepositos[contador]}<br></span>`;
+                    aux++;
+                } else {
+                    div_deposito.innerHTML += `<span style="color: green;">Dia ${listaDias[contador]} - Valor depositado = R$ ${listaDepositos[contador]}<br></span>`;
+                    aux++;
+                }
+            }
+        }
+    }
+</script>
+
+<!-- 11. João é um engraxate muito econômico que planeja guardar dinheiro para seus estudos. Todos os dias ele guarda uma parte do seu ganho em um cofrinho. Faça um programa que auxilie o João a controlar seu dinheiro
+
+a) Tenha dois campos de entrada: um para o dia do depósito e o outro para o valor depositado.
+
+b) Tenha um botão “guardar” que vai cadastrando todos os valores do item a)
+
+c) Mais abaixo deve haver outros campos, para o João digitar o intervalo de dias que ele quer analisar, e um botão "Rever Depósitos".
+
+d) Quando o botão “Rever Depósitos” for clicado o programa deve mostrar todos os depósitos cadastrados, um embaixo do outro, que estão no intervalo de dias informado no item c). da seguinte forma:
+
+            dia = xx   Valor depositado = R$ 9999,99
+
+sendo que o fundo da 1ª linha na cor azul claro e da 2ª na cor verde claro, 3ª na cor azul claro e assim por diante
+
+d) Ao final emitir uma mensagem com: quantidade de dias selecionados, valor total dos depósitos dos dias selecionados e a média do valor dos depósitos dos dias selecionados. -->

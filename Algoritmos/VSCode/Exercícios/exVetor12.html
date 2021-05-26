@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    Informe o RA: <input id="in_RA">
+    <br>
+    Informe a nota: <input id="in_nota">
+    <br>
+    <button onclick="cadastrarValores()">Guardar</button>
+    <br>
+    Visualizar por: <input maxlength="1" id="in_modo_visualizacao">
+    <button onclick="analisar()">Analisar</button>
+    <br>
+    <div id="div_mensagem_final"></div>
+
+</body>
+
+</html>
+
+<script>
+
+    var listaRA = [];
+    var listaNotas = [];
+    function cadastrarValores() {
+        listaRA.push(in_RA.value);
+        listaNotas.push(Number(in_nota.value));
+    }
+
+    function analisar() {
+        var modoVisualizacao = in_modo_visualizacao.value.toLowerCase();
+        if (modoVisualizacao != "p" && modoVisualizacao != "i") {
+            alert("valor invalido, entre com P ou I");
+        } else {
+            var listaRAFiltrados = [];
+            var listaNotasFiltradas = [];
+            var somatoria = 0;
+            for (var contador = 0; contador < listaRA.length; contador++) {
+                if (modoVisualizacao == "p") {
+                    if (listaRA[contador] % 2 == 0) {
+                        listaRAFiltrados.push(listaRA[contador]);
+                        listaNotasFiltradas.push(listaNotas[contador]);
+                        somatoria += listaNotas[contador];
+                    }
+                } else {
+                    if (listaRA[contador] % 2 != 0) {
+                        listaRAFiltrados.push(listaRA[contador]);
+                        listaNotasFiltradas.push(listaNotas[contador]);
+                        somatoria += listaNotas[contador];
+                    }
+                }
+            }
+
+            var media = somatoria / listaNotasFiltradas.length;
+
+            div_mensagem_final.innerHTML = "";
+            for (var contador = 0; contador < listaNotasFiltradas.length; contador++) {
+                var RAFiltrado = listaRAFiltrados[contador];
+                var notaFiltrada = listaNotasFiltradas[contador];
+                if (notaFiltrada >= media) {
+                    div_mensagem_final.innerHTML += `Aluno com RA = ${RAFiltrado} e nota ${notaFiltrada} foi selecionado pois a média é ${media}`;
+                }
+            }
+
+        }
+    }
+
+</script>
+
+<!-- 12. A Professora Julia gosta de analisar as notas dos alunos pela média que um grupo obteve. Faça um programa que auxilie Julia a analisar as notas de seus alunos:
+
+a) Tenha dois campos de entrada: um para o RA do aluno e outro para a nota dele.
+
+b) Tenha um botão “guardar” que vai cadastrando todos os valores do item a)
+
+c) Mais abaixo deve haver um campo para a Julia entrar com o valor “P” ou “I” , se ela digitar algo diferente disso emitir um alerta “valor invalido, entre com P ou I”. Deve haver também um botão "Analisar".
+
+d) Quando o botão “Analisar” for clicado o programa deve fazer:
+
+1-Se o valor entrado no item c) for “P” selecionar todos os alunos com RA par e calcular a média de suas notas. Se o valor entrado no item c) for “I” selecionar todos os alunos com RA ímpar e calcular a média de suas notas.
+
+2- Para todas as notas cadastradas que forem maiores ou iguais a média calculada no item acima, mostrá-las uma embaixo da outra, da seguinte forma:
+
+            Aluno com RA = xxxxxxx e nota 99,9 foi selecionado pois a média é 99,9
+
+d) Ao final emitir uma mensagem com: quantidade de notas acima da média, e a nova média (média das notas maiores que a média do critério de seleção). -->
