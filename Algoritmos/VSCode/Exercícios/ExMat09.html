@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Insira a quantidade de pessoas atualmente infectadas: <input id="in_infectados">
+<br>
+    <button onclick="infectadosOntem()">Quantas pessoas infectadas ontem</button>
+<br>
+    <span id="id_ontem"></span>
+<br>
+<br>
+    <button onclick="infectadosAmanha()">Quantas pessoas infectadas amanhã</button>
+<br>
+    <span id="id_amanha"></span>
+<br>
+<br>
+    <button onclick="infectadosMes()">Quantas pessoas infectadas daqui 1 mês</button>
+<br>
+    <span id="id_mes"></span>
+</body>
+</html>
+
+<script>
+    function infectadosOntem() {
+        var infectados = Number(in_infectados.value);
+        var ontem = infectados - 35;
+
+        id_ontem.innerHTML = `Ontem haviam ${ontem} pessoas infectadas`;
+    }
+
+    function infectadosAmanha() {
+        var infectados = Number(in_infectados.value);
+        var amanha = infectados + 35;
+
+        id_amanha.innerHTML = `A manhã haverão ${amanha} pessoas infectadas`;
+    }
+
+    function infectadosMes() {
+        var infectados = Number(in_infectados.value);
+        var mes = infectados + (35 * 30);
+
+        id_mes.innerHTML = `Daqui 1 mês haverão ${mes} pessoas infectadas`;
+    }
+</script>

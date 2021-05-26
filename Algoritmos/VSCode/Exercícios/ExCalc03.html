@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Insira a quantidade de m2 de grama necessários: <input id="input_grama">
+    <br>
+    <button onclick="calcOrc()">Calcular o orçamento</button>
+    <br>
+    <div id="id_orcamento">
+
+    </div>
+</body>
+</html>
+
+<script>
+    function calcOrc() {
+        var grama = Number(input_grama.value);
+        var esmeralda = 9.7 * grama;
+        var total_e = esmeralda + 150;
+        var batatais = 8.7 * grama;
+        var total_b = batatais + 200;
+        var saocarlos = 10.7 * grama;
+        var total_sc = saocarlos + 100;
+        id_orcamento.innerHTML = (`Para ${grama}m2 de grama, nosso orçamento é:
+        <br>
+        <br>
+        grama esmeralda = R$${esmeralda}, frete = R$150, valor total = R$${total_e}
+        <br>
+        <br>
+        grama batatais = R$${batatais}, frete = R$200, valor total = R$${total_b}
+        <br>
+        grama São Carlos = R$${saocarlos}, frete = R$100, valor total = R$${total_sc}`);
+    }
+</script>

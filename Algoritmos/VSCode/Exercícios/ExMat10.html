@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="oitoPassagens()">08 passagens</button>
+    <button onclick="vintePassagens()">20 passagens</button>
+    <button onclick="cinquentaPassagens()">50 passagens</button>
+<br>
+<br>
+    <span id="id_passagens"></span>
+</body>
+</html>
+
+<script>
+    function oitoPassagens() {
+        var bonus = (1 - (32.45 / 35.2)) * 100;
+        var passagensBonus = (35.2 - 32.45) / 4.4;
+
+        id_passagens.innerHTML = `Ao comprar 8 passagens, você pagou ${bonus.toFixed(0)}% a menos. 
+        É como se tivesse ganhado ${passagensBonus.toFixed(1)} passagens de bônus.`;
+    }
+
+    function vintePassagens() {
+        var bonus = (1 - (78.65 / 88)) * 100;
+        var passagensBonus = (88 - 78.65) / 4.4;
+
+        id_passagens.innerHTML = `Ao comprar 20 passagens, você pagou ${bonus.toFixed(0)}% a menos. 
+        É como se tivesse ganhado ${passagensBonus.toFixed(1)} passagens de bônus.`;
+    }
+
+    function cinquentaPassagens() {
+        var bonus = (1 - (191.41 / 220)) * 100;
+        var passagensBonus = (220 - 191.41) / 4.4;
+
+        id_passagens.innerHTML = `Ao comprar 50 passagens, você pagou ${bonus.toFixed(0)}% a menos. 
+        É como se tivesse ganhado ${passagensBonus.toFixed(1)} passagens de bônus.`;
+    }
+</script>

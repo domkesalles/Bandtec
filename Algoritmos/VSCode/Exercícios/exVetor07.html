@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    Insira alunos: <input id="in_aluno">
+    <br>
+    <button onclick="cadastrar()">Cadastrar aluno</button>
+    <button onclick="pesquisa()">Pesquisar alunos</button>
+    <br>
+    <span id="id_aluno"></span>
+</body>
+
+</html>
+
+<script>
+    var listaAluno = [];
+
+    function cadastrar() {
+        var aluno_digitado = in_aluno.value;
+        listaAluno.push(aluno_digitado);
+
+        id_aluno.innerHTML = "";
+
+        for (var contador = 0; contador < listaAluno.length; contador++) {
+            id_aluno.innerHTML += `${listaAluno[contador]}<br>`;
+        }
+    }
+
+    function pesquisa() {
+        var aluno_digitado = in_aluno.value;
+        var quantidade_vezes = 0;
+
+        for (var contador = 0; contador < listaAluno.length; contador++) {
+            if (aluno_digitado.toLowerCase() == listaAluno[contador].toLowerCase()) {
+                quantidade_vezes++;
+            }
+        }
+
+        if (quantidade_vezes == 0) {
+            alert("Nada encontrado!");
+        } else {
+            alert(`O aluno com o nome ${aluno_digitado} aparece em sua lista nessa quantidade de vezes: ${quantidade_vezes}`);
+        }
+    }
+</script>

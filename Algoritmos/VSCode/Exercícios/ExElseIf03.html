@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <select id="select_times">
+        <option value="time_invalido">-</option>
+        <option value="time_cortinas">Corinthians</option>
+        <option value="time_palmares">Palmeiras</option>
+        <option value="time_peixin">Santos</option>
+        <option value="time_spfc">São Paulo</option>
+    </select>
+    <br>
+    <button onclick="falaTime()">Fale sobre esse time</button>
+    <br>
+    <span id="id_time"></span>
+</body>
+
+</html>
+
+<script>
+    function falaTime() {
+        if (select_times.value == "time_invalido") {
+            alert("Escolha um time");
+        } else if (select_times.value == "time_cortinas") {
+            id_time.innerHTML = "Salve o Tolima!";
+            id_time.style.color = "white";
+            id_time.style.backgroundColor = "black";
+        } else if (select_times.value == "time_palmares") {
+            id_time.innerHTML = "Não tem copinha, não tem mundial";
+            id_time.style.color = "white";
+            id_time.style.backgroundColor = "green";
+        } else if (select_times.value == "time_peixin") {
+            id_time.innerHTML = "Santos é o c######, lugar de peixe é dentro do aquário";
+            id_time.style.color = "black";
+            id_time.style.backgroundColor = "white";
+        } else {
+            id_time.innerHTML = "Salve o Tricolor Paulista!";
+            id_time.style.color = "red";
+            id_time.style.backgroundColor = "black";
+        }
+    }
+</script>

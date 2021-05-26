@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="meuSegundoPrograma()"  >Clique em mim</button>
+</body>
+</html>
+
+<script>
+
+    // Padrões de nomenclatura:
+    // "_" -> snake_case
+    // "aA" -> camelCase
+    // "palavra1-palavra2" -> kebab-case
+// Não utilizar em noms de função:
+    // Caracter "espaço"
+    // Começar com a 1° letra maiúscula
+    // kebab-case
+    function meuPrimeiroPrograma() {
+        document.title = "Não sei se tá certo";
+    }
+    
+    function meuSegundoPrograma() {
+        alert("Vou chamar a função meuPrimeiroPrograma");
+        meuPrimeiroPrograma();
+    }
+
+</script>

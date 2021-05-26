@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    Escolha a marca da TV:
+    <select id="select_tv">
+        <option value="">Samsung</option>
+        <option value="">LG</option>
+        <option value="0">Mondial</option>
+        <option value="0">Britânia</option>
+    </select>
+    <br>
+    <br>
+    Insira o preço da TV: <input id="in_tv">
+    <br>
+    <button onclick="analisaCompra()">Analisar compra</button>
+</body>
+
+</html>
+
+<script>
+    function analisaCompra() {
+        var preco = Number(in_tv.value);
+
+        if (preco < 800 || preco > 2000) {
+            alert("TV fora da faixa de preço");
+
+            if (preco < 800) {
+                alert("Preço baixo de mais");
+            } else {
+                alert("TV cara de mais infelizmente");
+            }
+        } else if (select_tv.value == "0") {
+            alert("Na faixa de preço, porém marca não confiável");
+        } else {
+            alert("Essa TV pode entrar na sua lista");
+        }
+    }
+</script>

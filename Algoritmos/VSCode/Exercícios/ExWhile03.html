@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    Digite a frase: <input id="in_frase">
+    <br>
+    Insira a quantidade de vezes que a frase deve ser repetida: <input id="in_qtd">
+    <br>
+    <button onclick="filosofar()">Filosofar</button>
+    <br>
+    <span id="span_frase"></span>
+</body>
+
+</html>
+
+<script>
+    function filosofar() {
+        var contador = 0;
+        var numero = Number(in_qtd.value);
+
+        if (in_frase.value == "") {
+            alert("Mas qual a frase?");
+            span_frase.innerHTML = "";
+        } else if (in_qtd.value == "") {
+            alert("Quantidade inválida");
+            span_frase.innerHTML = "";
+        } else {
+            while (contador < numero) {
+                span_frase.innerHTML += `${in_frase.value}<br>`;
+                contador++;
+            }
+        }
+    }
+</script>

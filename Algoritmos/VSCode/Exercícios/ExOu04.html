@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+    Insira o nome da empresa: <input id="in_empresa">
+    <br>
+    Insira o valor da bolsa dada pela empresa: <input id="in_bolsa">
+    <br>
+    Insira o valor do VR dado pela empresa: <input id="in_vr">
+    <br>
+    Insira o tempo de deslocamento da empresa até a Bandtec: <input id="in_deslocamento" 
+    placeholder="Em minutos">
+    <br>
+    <button onclick="preferida()">É preferida?</button>
+    <br>
+    <br>
+    <span id="id_preferida"></span>
+</html>
+
+<script>
+    function preferida() {
+        var empresa = in_empresa.value;
+        var bolsa = Number(in_bolsa.value);
+        var vr = Number(in_vr.value);
+        var deslocamento = Number(in_deslocamento.value);
+
+        if (bolsa >= 1800 || vr >= 20 || deslocamento <= 30) {
+            id_preferida.innerHTML = `A empresa ${empresa} é uma das suas preferidas`;
+        } else {
+            id_preferida.innerHTML = `A empresa ${empresa} está fora da sua lista`;
+        }
+    }
+</script>

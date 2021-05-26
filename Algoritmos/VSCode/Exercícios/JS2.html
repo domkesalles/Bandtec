@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Quantidade de votos recebidos por Zé Buduia: <input id="input_qntd_buduia">
+    <br>
+    Quantidade de votos recebidos por Maria Bigodenha: <input id="input_qntd_maria">
+    <br>
+    Quantidade de votos brancos: <input id="input_qntd_brancos">
+    <br>
+    Quantidade de votos nulos: <input id="input_qntd_nulos">
+    <br>
+    <button onclick="eleicao()">Resultado da Eleição</button>
+    <br>
+    <div id= "id_eleicao">
+
+    </div>
+</body>
+</html>
+
+<script>
+    function eleicao() {
+        var buduia = Number(input_qntd_buduia.value);
+        var maria = Number(input_qntd_maria.value);
+        var brancos = Number(input_qntd_brancos.value);
+        var nulos = Number(input_qntd_nulos.value);
+        id_eleicao.innerHTML = (`<b>Total de votos: <u>${buduia + maria + brancos + nulos}</u>
+            <br>
+            Zé Buduia:</b> ${(buduia / (buduia + maria + brancos + nulos)) * 100}% (${buduia} votos)
+            <br>
+            <b>Maria Bigodenha:</b> ${(maria / (buduia + maria + brancos + nulos)) * 100}% (${maria} votos)
+            <br>
+            <b>Inválidos:</b> ${((brancos + nulos) / (buduia + maria + brancos + nulos)) * 100}% 
+            (${brancos + nulos} votos)`)
+    }
+</script>

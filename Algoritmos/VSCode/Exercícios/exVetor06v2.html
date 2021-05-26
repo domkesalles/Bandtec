@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    Nome aluno: <input id="in_nome_aluno">
+    <br>
+    <button onclick="cadastrar_aluno()">Cadastrar aluno</button>
+    <button onclick="pesquisar_aluno()">Pesquisar aluno</button>
+    <br>
+    <div id="div_alunos_container"></div>
+</body>
+
+</html>
+
+<script>
+    var lista_alunos = ["Rafael", "Gustavo", "João Pedro"];
+
+    function cadastrar_aluno() {
+        // lista_alunos.push(in_nome_aluno.value);
+        var aluno = in_nome_aluno.value;
+        var aluno_existente = false;
+
+        for (var contador = 0; contador < lista_alunos.length; contador++) {
+            if (lista_alunos[contador].toLowerCase() == aluno.toLowerCase()) {
+                aluno_existente = true;
+            }
+        }
+
+        if (aluno_existente) {
+            alert('Opa, aluno repetido, hoje não amigão!');
+        } else {
+            lista_alunos.push(in_nome_aluno.value);
+        }
+
+        div_alunos_container.innerHTML = "";
+
+        for (var contador = 0; contador < lista_alunos.length; contador++) {
+            div_alunos_container.innerHTML += `${lista_alunos[contador]}<br>`;
+        }
+    }
+
+    function pesquisar_aluno() {
+        var aluno = in_nome_aluno.value;
+        var aluno_existe_na_lista = false;
+
+        for (var contador = 0; contador < lista_alunos.length; contador++) {
+            if (lista_alunos[contador].toUpperCase() == aluno.toUpperCase()) {
+                aluno_existe_na_lista = true;
+            }
+        }
+
+        if (aluno_existe_na_lista) {
+            alert(`O aluno ${aluno} já existe na lista`);
+        }
+    }
+
+</script>

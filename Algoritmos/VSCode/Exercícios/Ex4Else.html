@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Insira o valor da pizza: <input id="input_pizza">
+    <br>
+    Insira a quantidade de amigos reunidos: <input id="input_amigos">
+    <br>
+    Insira o valor máximo que cada amigo pode pagar: <input id="in_maximo">
+    <br>
+    <button onclick="rolaPizza()">Rola a pizza?</button>
+    <br>
+    <span id="id_pizza"></span>
+</body>
+</html>
+
+<script>
+    function rolaPizza() {
+        var pizza = Number(input_pizza.value);
+        var amigos = Number(input_amigos.value);
+        var valor = pizza / amigos;
+        var maximo = Number(in_maximo.value);
+
+        id_pizza.innerHTML = (`<b>Cada amigo vai pagar R$${valor.toFixed(2)} pela pizza</b>`);
+
+        if (valor > maximo) {
+            id_pizza.innerHTML += (`<br>
+            <b>Deu ruim! Pizza muito cara!</b>`);
+        } else {
+            id_pizza.innerHTML += (`<br>
+            <b>Uhu! Vamos pedir a pizza!</b>`);
+        }
+    }
+</script>

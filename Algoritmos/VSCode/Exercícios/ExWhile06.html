@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    Insira o valor de um carro a ser financiado: <input id="in_carro">
+    <br>
+    Insira a quantidade de parcelas do financiamento: <input id="in_parcelas">
+    <br>
+    <button onclick="veParcelas()">Ver parcelas</button>
+    <br>
+    <span id="span_parcela"></span>
+</body>
+
+</html>
+
+<script>
+    function veParcelas() {
+        var carro = Number(in_carro.value);
+        var meses = Number(in_parcelas.value);
+        var parcela = carro / meses;
+        var contador = 2;
+        
+
+        if (in_carro.value == "" || carro < 1000) {
+            alert("Valor total inválido");
+        } else if (in_parcelas.value == "" || meses < 6) {
+            alert("Parcelas inválidas");
+        } else {
+            span_parcela.innerHTML = `Parcela 1 = ${parcela}<br>`;
+            while (contador <= meses) {
+               parcela = parcela + (parcela * 0.015);
+               contador++;
+
+               span_parcela.innerHTML += `Parcela ${contador} = ${parcela.toFixed(2)}<br>`;
+            }
+        }
+    }
+</script>

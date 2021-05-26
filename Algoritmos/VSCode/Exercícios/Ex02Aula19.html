@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <select id="select_dc">
+        <option value="filme_invalido_dc">-</option>
+        <option value="filme_bvs">Batman vs Superman: A Origem da Justiça</option>
+        <option value="filme_mm">Mulher Maravilha 1984</option>
+        <option value="filme_aqua">Aquaman</option>
+    </select>
+    <select id="select_marvel">
+        <option value="filme_invalido">-</option>
+        <option value="filme_ultimato">Vingadores: Ultimato</option>
+        <option value="filme_infinita">Vingadores: Guerra Infinita</option>
+        <option value="filme_ultron">Vingadores: Era de Ultron</option>
+    </select>
+<br>
+    <button onclick="veNotas()">Ver notas</button>
+<br>
+    <div id="div_imagem_marvel"></div>
+    <div id="div_imagem_dc"></div>
+</body>
+</html>
+
+<script>
+    function veNotas() {
+        if (select_marvel.value == "filme_invalido" || select_dc.value == "filme_invalido_dc") {
+            alert("Por favor, escolha os filmes");
+        }
+
+        if (select_marvel.value == "filme_ultimato" && select_dc.value == "filme_bvs") {
+            alert("O filme Vingadores: Ultimato tem uma nota de 8.4 e o filme Batman vs Superman: A Origem da Justiça tem uma nota de 6.4 no IMDB");
+            alert(`O filme Vingadores: Ultimato é ${(((8.4 / 6.4) * 100) - 100).toFixed(2)}% superior ao filme Batman vs Superman: A Origem da Justiça`)
+        
+            div_imagem_marvel.innerHTML = `<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMwtU95JygcmCq4e3XPpL9W0ATjGFoQCQm16dbpIp7BM36B7lH" 
+        alt= "Vingadores: Ultimato" style="width: 190px; height: 275px;">`;
+            div_imagem_dc.innerHTML = `<img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSK9V67YydeMHGnfIixhrZLSEJovfiYxzh_bV_Tl05EpChscgSB" 
+        alt= "Batman vs Superman: A Origem da Justiça" style="width: 190px; height: 275px;">`;
+        }
+
+        if (select_marvel.value == "filme_ultimato" && select_dc.value == "filme_mm") {
+            alert("O filme Vingadores: Ultimato tem uma nota de 8.4 e o filme Mulher Maravilha 1984 tem uma nota de 5.4 no IMDB");
+            alert(`O filme Vingadores: Ultimato é ${(((8.4 / 5.4) * 100) - 100).toFixed(2)}% superior ao filme Mulher Maravilha 1984`)
+            
+            div_imagem_marvel.innerHTML = `<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMwtU95JygcmCq4e3XPpL9W0ATjGFoQCQm16dbpIp7BM36B7lH" 
+        alt= "Vingadores: Ultimato" style="width: 190px; height: 275px;">`;
+            div_imagem_dc.innerHTML = `<img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSnPSY2V7qpvujQ4V5gtQqAtYgRzcnZENWwb02wFMPxv58bxRPt" 
+        alt= "filme Mulher Maravilha 1984" style="width: 190px; height: 275px;">`;
+        }
+
+        if (select_marvel.value == "filme_ultimato" && select_dc.value == "filme_aqua") {
+            alert("O filme Vingadores: Ultimato tem uma nota de 8.4 e o filme Aquaman tem uma nota de 6.9 no IMDB");
+            alert(`O filme Vingadores: Ultimato é ${(((8.4 / 6.9) * 100) - 100).toFixed(2)}% superior ao filme Aquaman`)
+            
+            div_imagem_marvel.innerHTML = `<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMwtU95JygcmCq4e3XPpL9W0ATjGFoQCQm16dbpIp7BM36B7lH" 
+        alt= "Vingadores: Ultimato" style="width: 190px; height: 275px;">`;
+            div_imagem_dc.innerHTML = `<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYzV40YFxlw_Sgxv9ha8iypPlrOJa9ZHkAk6HQBVi1jagFRc3K" 
+        alt= "Aquaman" style="width: 190px; height: 275px;">`;
+        }
+
+        if (select_marvel.value == "filme_infinita" && select_dc.value == "filme_aqua") {
+            alert("O filme Vingadores: Guerra Infinita tem uma nota de 8.4 e o filme Aquaman tem uma nota de 6.9 no IMDB");
+            alert(`O filme Vingadores: Guerra Infinita é ${(((8.4 / 6.9) * 100) - 100).toFixed(2)}% superior ao filme Aquaman`)
+            
+            div_imagem_marvel.innerHTML = `<img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcS4neC_Y4U1G6u2QlEFqbCizheGBUnZg1w874qWbIcVlv9tPuSu" 
+        alt= "Vingadores: Guerra Infinita" style="width: 190px; height: 275px;">`;
+            div_imagem_dc.innerHTML = `<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYzV40YFxlw_Sgxv9ha8iypPlrOJa9ZHkAk6HQBVi1jagFRc3K" 
+        alt= "Aquaman" style="width: 190px; height: 275px;">`;
+        }
+
+        if (select_marvel.value == "filme_infinita" && select_dc.value == "filme_mm") {
+            alert("O filme Vingadores: Guerra Infinita tem uma nota de 8.4 e o filme Mulher Maravilha 1984 tem uma nota de 5.4 no IMDB");
+            alert(`O filme Vingadores: Guerra Infinita é ${(((8.4 / 5.4) * 100) - 100).toFixed(2)}% superior ao filme Mulher Maravilha 1984`)
+            
+            div_imagem_marvel.innerHTML = `<img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcS4neC_Y4U1G6u2QlEFqbCizheGBUnZg1w874qWbIcVlv9tPuSu" 
+        alt= "Vingadores: Guerra Infinita" style="width: 190px; height: 275px;">`;
+            div_imagem_dc.innerHTML = `<img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSnPSY2V7qpvujQ4V5gtQqAtYgRzcnZENWwb02wFMPxv58bxRPt" 
+        alt= "filme Mulher Maravilha 1984" style="width: 190px; height: 275px;">`;
+        }
+
+        if (select_marvel.value == "filme_infinita" && select_dc.value == "filme_bvs") {
+            alert("O filme Vingadores: Guerra Infinita tem uma nota de 8.4 e o filme Batman vs Superman: A Origem da Justiça tem uma nota de 6.4 no IMDB");
+            alert(`O filme Vingadores: Guerra Infinita é ${(((8.4 / 6.4) * 100) - 100).toFixed(2)}% superior ao filme Batman vs Superman: A Origem da Justiça`)
+            
+            div_imagem_marvel.innerHTML = `<img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcS4neC_Y4U1G6u2QlEFqbCizheGBUnZg1w874qWbIcVlv9tPuSu" 
+        alt= "Vingadores: Guerra Infinita" style="width: 190px; height: 275px;">`;
+            div_imagem_dc.innerHTML = `<img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSK9V67YydeMHGnfIixhrZLSEJovfiYxzh_bV_Tl05EpChscgSB" 
+        alt= "Batman vs Superman: A Origem da Justiça" style="width: 190px; height: 275px;">`;
+        }
+
+        if (select_marvel.value == "filme_ultron" && select_dc.value == "filme_bvs") {
+            alert("O filme Vingadores: Era de Ultron tem uma nota de 7.3 e o filme Batman vs Superman: A Origem da Justiça tem uma nota de 6.4 no IMDB");
+            alert(`O filme Vingadores: Era de Ultron é ${(((7.3 / 6.4) * 100) - 100).toFixed(2)}% superior ao filme Batman vs Superman: A Origem da Justiça`)
+            
+            div_imagem_marvel.innerHTML = `<img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRD559ar0kYM2Gp3E9xv1MUgwQ-O6n1Ytj8Vtr__EFsGofsuwWu" 
+        alt= "Vingadores: Era de Ultron" style="width: 190px; height: 275px;">`;
+            div_imagem_dc.innerHTML = `<img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSK9V67YydeMHGnfIixhrZLSEJovfiYxzh_bV_Tl05EpChscgSB" 
+        alt= "Batman vs Superman: A Origem da Justiça" style="width: 190px; height: 275px;">`;
+        }
+
+        if (select_marvel.value == "filme_ultron" && select_dc.value == "filme_mm") {
+            alert("O filme Vingadores: Era de Ultron tem uma nota de 7.3 e o filme Mulher Maravilha 1984 tem uma nota de 5.4 no IMDB");
+            alert(`O filme Vingadores: Era de Ultron é ${(((7.3 / 5.4) * 100) - 100).toFixed(2)}% superior ao filme Mulher Maravilha 1984`)
+            
+            div_imagem_marvel.innerHTML = `<img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRD559ar0kYM2Gp3E9xv1MUgwQ-O6n1Ytj8Vtr__EFsGofsuwWu" 
+        alt= "Vingadores: Era de Ultron" style="width: 190px; height: 275px;">`;
+            div_imagem_dc.innerHTML = `<img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSnPSY2V7qpvujQ4V5gtQqAtYgRzcnZENWwb02wFMPxv58bxRPt" 
+        alt= "filme Mulher Maravilha 1984" style="width: 190px; height: 275px;">`;
+        }
+
+        if (select_marvel.value == "filme_ultron" && select_dc.value == "filme_aqua") {
+            alert("O filme Vingadores: Era de Ultron tem uma nota de 7.3 e o filme Aquaman tem uma nota de 6.9 no IMDB");
+            alert(`O filme Vingadores: Era de Ultron é ${(((7.3 / 6.9) * 100) - 100).toFixed(2)}% superior ao filme Aquaman`)
+            
+            div_imagem_marvel.innerHTML = `<img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRD559ar0kYM2Gp3E9xv1MUgwQ-O6n1Ytj8Vtr__EFsGofsuwWu" 
+        alt= "Vingadores: Era de Ultron" style="width: 190px; height: 275px;">`;
+            div_imagem_dc.innerHTML = `<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYzV40YFxlw_Sgxv9ha8iypPlrOJa9ZHkAk6HQBVi1jagFRc3K" 
+        alt= "Aquaman" style="width: 190px; height: 275px;">`;
+        }
+}
+</script>

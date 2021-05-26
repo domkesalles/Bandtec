@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    Insira os locais para quais você já viajou: <input id="in_lugar">
+    <br>
+    <button onclick="cadastraLocal()">Cadastrar local</button>
+    <br>
+    Insira qual a viagem escolhida: <input id="in_nmr">
+    <br>
+    <button onclick="relembraViagem()">Relembrar viagem</button>
+    <br>
+    <span id="id_viagem"></span>
+</body>
+
+</html>
+
+<script>
+    var listaViagem = [];
+
+    function cadastraLocal() {
+        listaViagem.push(in_lugar.value);
+        in_lugar.value = "";
+    }
+
+    function relembraViagem() {
+        var numeroViagem = Number(in_nmr.value);
+
+        if (numeroViagem > listaViagem.length) {
+            id_viagem.innerHTML = `Você não fez uma ${numeroViagem}ª viagem!`;
+        } else{
+            id_viagem.innerHTML = `${listaViagem[numeroViagem - 1]}`;
+        }
+    }
+</script>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <select id="select_marvel">
+        <option value="filme_invalido">-</option>
+        <option value="filme_ultimato">Vingadores: Ultimato</option>
+        <option value="filme_infinita">Vingadores: Guerra Infinita</option>
+        <option value="filme_ultron">Vingadores: Era de Ultron</option>
+    </select>
+<br>
+    <button onclick="veNota()">Ver nota</button>
+</body>
+</html>
+
+<script>
+    function veNota() {
+        if (select_marvel.value == "filme_invalido") {
+            alert("Por favor, escolha um filme");
+        }
+
+        if (select_marvel.value == "filme_ultimato") {
+            alert("O filme Vingadores: Ultimato tem uma nota de 8.4");
+        }
+
+        if (select_marvel.value == "filme_infinita") {
+            alert("O filme Vingadores: Guerra Infinita tem uma nota de 8.4");
+        }
+
+        if (select_marvel.value == "filme_ultron") {
+            alert("O filme Vingadores: Era de Ultron tem uma nota de 7.3");
+        }
+    }
+</script>

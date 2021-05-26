@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Insira um número qualquer: <input id="in_numero">
+<br>
+    <button onclick="raizQuadrada()">Exibir sua raíz quadrada</button>
+<br>
+    <span id="id_quadrada"></span>
+<br>
+<br>
+    <button onclick="raizCubica()">Exibir sua raíz cúbica</button>
+<br>
+    <span id="id_cubica"></span>
+</body>
+</html>
+
+<script>
+    function raizQuadrada() {
+        var numero = Number(in_numero.value);
+        var quadrada = numero ** (1 / 2);
+
+        id_quadrada.innerHTML = `A raíz quadrada de ${numero} é ${quadrada.toFixed(1)}`;
+    }
+
+    function raizCubica() {
+        var numero = Number(in_numero.value);
+        var cubica = numero ** (1 / 3);
+
+        id_cubica.innerHTML = `A raíz cubica de ${numero} é ${cubica.toFixed(1)}`;
+    }
+</script>

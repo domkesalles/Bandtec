@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    Número: <input id="in_numero">
+    <br>
+    <button onclick="verificaNumero()">Mostrar frase</button>
+    <br>
+    <span id="span_frase"></span>
+</body>
+
+</html>
+
+<script>
+    function verificaNumero() {
+        var contador = 0;
+        var numero = Number(in_numero.value);
+        if (numero >= 2) {
+            while (contador < numero) {
+            span_frase.innerHTML += "O São Paulo é um sentimento de são-paulinos<br>";
+            contador++;
+        }
+        } else {
+            span_frase.innerHTML = "O São Paulo é um sentimento de são-paulinos";
+        }
+        
+    }
+</script>

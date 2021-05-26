@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    Insira o intervalo de dias: <input id="in_dias">
+    <br>
+    <button onclick="exibeRotina()">Exibir rotina mensal</button>
+    <br>
+    <span id="span_musculacao"></span>
+</body>
+
+</html>
+
+<script>
+    function exibeRotina() {
+        var dias = 1;
+        var intervalo = Number(in_dias.value);
+
+        while (dias <= 30) {
+            span_musculacao.innerHTML += `Dia ${dias} - <b>Musculação<b><br>`;
+            dias++;
+            var contador = 1;
+
+            while (contador < intervalo) {
+                span_musculacao.innerHTML += `Dia ${dias} - Comer, dormir etc<br>`;
+                contador++;
+                dias++;
+                
+                if (dias > 30) {
+                    break;
+                }
+            }
+        }
+    }
+</script>

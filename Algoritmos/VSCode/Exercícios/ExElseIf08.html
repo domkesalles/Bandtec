@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="botao1()">Botão 1</button>
+    <button onclick="botao2()">Botão 2</button>
+    <button onclick="botao3()">Botão 3</button>
+    <button onclick="botao4()">Botão 4</button>
+    <button onclick="botao5()">Botão 5</button>
+    <br>
+    <span id="id_avaliacao">Sua avaliação:</span>
+    <br>
+    <div id="div_imagem"></div>
+</body>
+
+</html>
+
+<script>
+    var media = 0;
+
+    function botao1() {
+        media = 4.4;
+        resultado();
+    }
+
+    function botao2() {
+        media = 3.5;
+        resultado();
+    }
+
+    function botao3() {
+        media = 1.2;
+        resultado();
+    }
+
+    function botao4() {
+        media = 4.9;
+        resultado();
+    }
+
+    function botao5() {
+        media = 2.7;
+        resultado();
+    }
+
+    function resultado() {
+        if (media < 2) {
+            id_avaliacao.innerHTML = `Sua avaliação: ${media}`;
+            div_imagem.innerHTML = `<img src="https://sm.ign.com/ign_br/screenshot/default/natio_wf8h.jpg" 
+            alt="Naruto chorando" style="width: 275px; height: 400px;">`;
+        } else if (media <= 3) {
+            id_avaliacao.innerHTML = `Sua avaliação: ${media}`;
+            div_imagem.innerHTML = `<img src="https://pa1.narvii.com/6591/4bec88d00596f280569fcbedcacaeeb487210c6e_hq.gif" 
+            alt="Naruto neutro" style="width: 275px; height: 400px;">`;
+        } else if (media <= 4.5) {
+            id_avaliacao.innerHTML = `Sua avaliação: ${media}`;
+            div_imagem.innerHTML = `<img src="https://pbs.twimg.com/media/EGgqv8zWkAAzP87.jpg" 
+            alt="Naruto feliz" style="width: 275px; height: 400px;">`;
+        } else {
+            id_avaliacao.innerHTML = `Sua avaliação: ${media}`;
+            div_imagem.innerHTML = `<img src="https://i.pinimg.com/736x/bd/40/4a/bd404a92e20e1d7d2fb87b13f82fe7e8.jpg" 
+            alt="Naruto mega feliz" style="width: 275px; height: 400px;">`;
+        }
+    }
+</script>

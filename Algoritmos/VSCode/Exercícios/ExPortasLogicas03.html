@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <select id="select_candidatoA">
+        <option value="0">Não concordo com o tema</option>
+        <option value="1">Concordo com o tema</option>
+    </select>
+    <select id="select_candidatoB">
+        <option value="0">Não concordo com o tema</option>
+        <option value="1">Concordo com o tema</option>
+    </select>
+    <br>
+    <br>
+    <button onclick="interrompe()">Devo interromper?</button>
+</body>
+
+</html>
+
+<script>
+    function interrompe() {
+        var candidatoA = Number(select_candidatoA.value);
+        var candidatoB = Number(select_candidatoB.value);
+        var total = candidatoA + candidatoB;
+
+        if (total == 0) {
+            alert("Debate continua: ninguém concorda");
+        } else if (candidatoA == 0 && candidatoB == 1) {
+            alert("Debate continua: apenas candidato A concorda");
+        } else if (candidatoA == 1 && candidatoB == 0) {
+            alert("Debate continua: apenas candidato B concorda");
+        } else {
+            alert("Debate pode encerrar: ambos candidatos concordam com o tema");
+        }
+    }
+</script>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <span id="id_vezes">Você já clicou <b>0</b> vezes</span>
+<br>
+    <button onclick="numeroClique()">Clica nimim</button>
+</body>
+</html>
+
+<script>
+    var numeroVezes = 0;
+
+    function numeroClique() {
+        var contador = ++numeroVezes;
+        id_vezes.innerHTML = `Você já clicou <b>${contador}</b> vezes`;
+    }
+</script>

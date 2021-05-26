@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    Insira a idade: <input id="in_idade">
+    <br>
+    Insira o peso: <input id="in_peso">
+    <br>
+    <br>
+    <button onclick="brinca()">Pode brincar?</button>
+    <br>
+    <br>
+    <span id="id_brinca"></span>
+</body>
+
+</html>
+
+<script>
+    function brinca() {
+        var idade = Number(in_idade.value);
+        var peso = Number(in_peso.value);
+
+        if(idade > 15 && peso <= 100) {
+            id_brinca.innerHTML = "Você poderá brincar :)";
+            id_brinca.style.color = "blue";
+        } else {
+            id_brinca.innerHTML = "Você não poderá brincar :(";
+            id_brinca.style.color = "red";
+        }
+    }
+</script>

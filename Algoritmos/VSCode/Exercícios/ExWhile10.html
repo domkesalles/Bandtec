@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    Insira a quantidade de elefantes: <input id="in_elefante">
+    <br>
+    <button onclick="atazana()">Atazanar a médium</button>
+    <br>
+    <span id="span_elefante"></span>
+</body>
+
+</html>
+
+<script>
+    function atazana() {
+        var contador = 1;
+        var elefante = Number(in_elefante.value);
+
+        while (contador < elefante) {
+            span_elefante.innerHTML += "1 elefante incomoda muita gente!<br>";
+            contador++;
+            span_elefante.innerHTML += `${contador} elefantes incomodam, incomodam, `;
+            var nmrFrase = 2;
+
+            if (contador > 1) {
+                while (nmrFrase < contador) {
+                    span_elefante.innerHTML += "incomodam, ";
+                    nmrFrase++;
+                }
+            }
+            span_elefante.innerHTML += " muito mais!<br>";
+        }
+    }
+</script>

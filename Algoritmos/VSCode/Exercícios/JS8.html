@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Insira o chakra base do jinchuuriki: <input id="input_chakra">
+    <br>
+    <b>Transformar em...</b>
+    <br>
+    <button onclick="umaCauda()">Uma cauda</button>
+    <button onclick="quatroCaudas()">Quatro caudas</button>
+    <button onclick="seisCaudas()">Seis caudas</button>
+    <br>
+    <div id="id_transformacao">
+
+    </div>
+</body>
+</html>
+
+<script>
+    function umaCauda() {
+        var chakra = Number(input_chakra.value);
+        var caudaUm = chakra * 50;
+        id_transformacao.innerHTML = (`Após se transformar em uma cauda, 
+        o chakra do jinchuuriki passa a ser de ${caudaUm}`);
+    }
+    function quatroCaudas() {
+        var chakra = Number(input_chakra.value);
+        var caudaQuatro = chakra * 100;
+        id_transformacao.innerHTML = (`Após se transformar em quatro caudas, 
+        o chakra do jinchuuriki passa a ser de ${caudaQuatro}`);
+    }
+    function seisCaudas() {
+        var chakra = Number(input_chakra.value);
+        var caudaSeis = chakra * 200;
+        id_transformacao.innerHTML = (`Após se transformar em seis caudas, 
+        o chakra do jinchuuriki passa a ser de ${caudaSeis}`);
+    }
+</script>

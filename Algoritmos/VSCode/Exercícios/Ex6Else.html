@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Insira a temperatura do ambiente: <input id="in_temperatura">
+<br>
+    <button onclick="verificaClima()">Verificar clima</button>
+<br>
+    <div id="id_temperatura"></div>
+</body>
+</html>
+
+<script>
+    function verificaClima() {
+        var temperatura = Number(in_temperatura.value);
+
+        if (temperatura < 10) {
+            id_temperatura.innerHTML = `Temperatura apropriada para conservar alimento
+            <br>
+            <img src="https://www.iped.com.br/_upload/content/2015/03/03/identificar-alimentos-bom-estado.jpg" 
+        alt="Alimento em bom estado" style="width: 400px; height: 275px;">`;
+        } else {
+            id_temperatura.innerHTML = `Temperatura inapropriada para conservar alimento
+            <br>
+            <img src="https://www.clickgratis.com.br/blog-clickgratis/wp-content/uploads/2016/03/allimentos-estragados.jpg" 
+        alt="Alimento estragado" style="width: 400px; height: 275px;">`;
+        }
+    }
+</script>

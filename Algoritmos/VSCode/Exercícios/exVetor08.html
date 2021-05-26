@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    Insira as notas dos alunos: <input id="in_nota">
+    <br>
+    <button onclick="cadastraNota()">Cadastrar nota</button>
+    <br>
+    <br>
+    Insira o primeiro número do intervalo: <input id="in_intervalo1">
+    <br>
+    Insira o segundo número do intervalo: <input id="in_intervalo2">
+    <br>
+    <button onclick="reveNotas()">Rever notas</button>
+    <br>
+    <span id="id_notas"></span>
+</body>
+
+</html>
+
+<script>
+    var listaNotas = [];
+    var contador = 0;
+    var soma = 0;
+
+    function cadastraNota() {
+        listaNotas.push(in_nota.value);
+        soma = soma + Number(in_nota.value);
+        in_nota.value = "";
+        contador++;
+    }
+
+    function reveNotas() {
+        var nota1 = Number(in_intervalo1.value);
+        var nota2 = Number(in_intervalo2.value);
+
+        id_notas.innerHTML = "";
+
+        while (nota1 <= nota2) {
+            id_notas.innerHTML += `${listaNotas[nota1 - 1]}<br>`;
+            nota1++;
+        }
+
+        id_notas.innerHTML += `<br>Foram cadastradas ${contador} notas que estão no intervalo de ${in_intervalo1.value} até ${nota2} e a média dessas notas é ${soma / contador}`;
+    }
+</script>

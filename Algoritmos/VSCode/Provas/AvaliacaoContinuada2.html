@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avaliação Continuada 2</title>
+</head>
+
+<body>
+    Insira seu nome: <input id="in_nome">
+    <br>
+    Insira sua idade: <input id="in_idade">
+    <br>
+    Escolha a modalidade: <select id="select_modalidade">
+        <option value="Correr">Correr</option>
+        <option value="Nadar">Nadar</option>
+        <option value="Pedalar">Pedalar</option>
+    </select>
+    <br>
+    <br>
+    <button onclick="praticaEsporte()">Praticar esporte</button>
+    <br>
+    <span id="id_placar"></span>
+    <br>
+    <div id="div_corrida" style="width: 300px; float: left;">
+        <img src="https://image.flaticon.com/icons/png/128/103/103956.png" alt="Corrida" id="img_corrida">
+    </div>
+    <div id="div_natacao" style="width: 300px; float: left;">
+        <img src="https://image.flaticon.com/icons/png/128/124/124212.png" alt="Natação" id="img_natacao">
+    </div>
+    <div id="div_ciclismo" style="width: 300px; float: left;">
+        <img src="https://image0.flaticon.com/icons/png/128/94/94203.png" alt="Ciclismo" id="img_ciclismo">
+    </div>
+</body>
+
+</html>
+
+<script>
+    var corrida = 0;
+    var natacao = 0;
+    var ciclismo = 0;
+    var total = 0;
+
+    function praticaEsporte() {
+        var nome = in_nome.value;
+        var idade = in_idade.value;
+        var modalidade = select_modalidade.value;
+        var nome = in_nome.value;
+        var idade = in_idade.value;
+
+        if (nome.length < 3 || idade < 18 || idade > 80) {
+            alert("Dados inválidos!");
+        } else if (modalidade == "Correr") {
+            corrida += 1.5;
+            total += 1.5;
+        } else if (modalidade == "Nadar") {
+            natacao += 1.5;
+            total += 1.5;
+        } else {
+            ciclismo += 1.5;
+            total += 1.5;
+        }
+
+        var porcentagemCorrida = (corrida / total) * 100;
+        var porcentagemNatacao = (natacao / total) * 100;
+        var porcentagemCiclismo = (ciclismo / total) * 100;
+
+        id_placar.innerHTML = `Atleta: <b>${nome}</b> - Idade: <b>${idade}</b> anos.
+        <br>
+        Km correndo: <b>${corrida.toFixed(1)}</b> (<b>${porcentagemCorrida.toFixed(2)}</b>%)
+        <br>
+        Km nadando: <b>${natacao.toFixed(1)}</b> (<b>${porcentagemNatacao.toFixed(2)}</b>%)
+        <br>
+        Km pedalando: <b>${ciclismo.toFixed(1)}</b> (<b>${porcentagemCiclismo.toFixed(2)}</b>%)
+        <br>
+        <br>
+        Km total: <b>${total.toFixed(1)}</b>`;
+        img_corrida.style.width = `${porcentagemCorrida}%`;
+        img_natacao.style.width = `${porcentagemNatacao}%`;
+        img_ciclismo.style.width = `${porcentagemCiclismo}%`;
+    }
+</script>

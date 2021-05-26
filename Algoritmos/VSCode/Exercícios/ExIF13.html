@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Insira o nome da última sitcom que você assistiu: <input id="in_sitcom">
+    <br>
+    Insira o total de episódios que você já assistiu dessa série: <input id="in_eps">
+    <br>
+    <button onclick="verificaNivel()">Verificar nível</button>
+    <br>
+    <span id="id_serie"></span>
+</body>
+</html>
+
+<script>
+    function verificaNivel() {
+        var serie = in_sitcom.value;
+        var eps = Number(in_eps.value);
+        var tempo = eps * 22;
+        var hora = tempo / 60;
+
+        id_serie.innerHTML = (`Vejo que você gosta da série ${serie}.`);
+
+        if (hora > 30) {
+            id_serie.innerHTML += (`<br>
+            Uau, você realmente gosta dessa série!`);
+        }
+    }
+</script>

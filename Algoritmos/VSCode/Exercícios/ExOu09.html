@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    Insira a nota de avaliação: <input id="in_nota">
+    <br>
+    <button onclick="avalia()">Avaliar</button>
+    <br>
+    <img src="" id="img_estrela">
+</body>
+
+</html>
+
+<script>
+    function avalia() {
+        var nota = Number(in_nota.value); 
+
+        if (nota < 0 || nota > 5) {
+            alert("Nota inválida. Digite de 0 a 5");
+            img_estrela.src = "";
+        } else if (nota < 0.5) {
+            img_estrela.src = "https://thumbs.dreamstime.com/b/avalia%C3%A7%C3%A3o-de-cinco-estrelas-estrela-do-vidro-verde-vetor-bandeira-da-revis%C3%A3o-consumidor-ou-cliente-feedback-n%C3%ADvel-satisfa%C3%A7%C3%A3o-136617780.jpg";
+        } else if (nota < 1) {
+            img_estrela.src = "https://avaliadcufscar.files.wordpress.com/2017/07/estrelas054.jpg?w=758";
+        } else if (nota < 1.5) {
+            img_estrela.src = "https://thumbs.dreamstime.com/z/avalia%C3%A7%C3%A3o-as-estrelas-do-feedback-um-borbulham-recomenda%C3%A7%C3%B5es-assinam-s%C3%ADmbolo-aviso-138175301.jpg";
+        } else if (nota < 2) {
+            img_estrela.src = "https://avaliadcufscar.files.wordpress.com/2017/07/estrelas154.jpg?w=758";
+        } else if (nota < 2.5) {
+            img_estrela.src = "https://avaliadcufscar.files.wordpress.com/2017/07/estrelas204.jpg";
+        } else if (nota < 3) {
+            img_estrela.src = "https://avaliadcufscar.files.wordpress.com/2017/07/estrelas251.jpg";
+        } else if (nota < 3.5) {
+            img_estrela.src = "https://avaliadcufscar.files.wordpress.com/2017/07/estrelas305.jpg";
+        } else if (nota < 4) {
+            img_estrela.src = "https://avaliadcufscar.files.wordpress.com/2017/07/estrelas354.jpg";
+        } else if (nota < 4.5) {
+            img_estrela.src = "https://avaliadcufscar.files.wordpress.com/2017/07/estrelas404.jpg";
+        }
+        else if (nota < 5) {
+            img_estrela.src = "https://avaliadcufscar.files.wordpress.com/2017/07/estrelas454.jpg";
+        } else {
+            img_estrela.src = "https://avaliadcufscar.files.wordpress.com/2017/07/estrelas504.jpg";
+        }
+    }
+</script>

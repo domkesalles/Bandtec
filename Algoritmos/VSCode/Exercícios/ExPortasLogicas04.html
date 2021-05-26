@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <select id="select_frequentadorA">
+        <option value="0">Não irei neste fim de semana</option>
+        <option value="1">Irei neste fim de semana</option>
+    </select>
+    <select id="select_frequentadorB">
+        <option value="0">Não irei neste fim de semana</option>
+        <option value="1">Irei neste fim de semana</option>
+    </select>
+    <br>
+    <br>
+    <button onclick="checaAglomeracao()">Checar aglomeração</button>
+</body>
+
+</html>
+
+<script>
+    function checaAglomeracao() {
+        var frequentadorA = Number(select_frequentadorA.value);
+        var frequentadorB = Number(select_frequentadorB.value);
+        var total = frequentadorA + frequentadorB;
+
+        if (total == 1) {
+            alert("Risco baixo de aglomeração, 50% das pessoas estarão no parque");
+        } else if (total == 2) {
+            alert("Risco alto de aglomeração, 100% de ocupação");
+        } else {
+            alert("Risco 0 de aglomeração, perfeito :)");
+        }
+    }
+</script>

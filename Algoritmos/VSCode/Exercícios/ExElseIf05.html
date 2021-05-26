@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    Quantos pães franceses você tem comido por dia? <input id="in_paes">
+    <br>
+    Quantos pacotes de bolacha recheada você tem comido por dia? <input id="in_bolacha">
+    <br>
+    Quantos copos de achocolatado você tem tomado por dia? <input id="in_achocolatado">
+    <br>
+    <button onclick="verificaCaloria()">Verificar calorias</button>
+    <br>
+    <span id="id_caloria"></span>
+    <br>
+    <div id="div_imagem"></div>
+</body>
+
+</html>
+
+<script>
+    function verificaCaloria() {
+        var qtdPaes = Number(in_paes.value);
+        var qtdBolacha = Number(in_bolacha.value);
+        var qtdAchocolatado = Number(in_achocolatado.value);
+        var caloriaPao = qtdPaes * 50;
+        var caloriaBolacha = qtdBolacha * 80;
+        var caloriaAchocolatado = qtdAchocolatado * 70;
+        var caloriaFinal = caloriaPao + caloriaBolacha + caloriaAchocolatado;
+
+        if (caloriaFinal < 200) {
+            id_caloria.innerHTML = "Parabéns, vai sair em forma da quarentena!";
+            div_imagem.innerHTML = `<img src="https://legadodamarvel.com.br/wp-content/uploads/2020/02/Foto-1-Chris-Hemsworth-Bro-Thor-legadodamarvel.jpg" 
+            alt="Pessoa em forma" style="width: 275px; height: 400px;">`;
+        } else if (caloriaFinal < 400) {
+            id_caloria.innerHTML = "Cuidado, vai ficar mais 'fofinho(a)' após quarentena!";
+            div_imagem.innerHTML = `<img src="https://www.homemnoespelho.com.br/wp-content/uploads/2015/03/Homem-No-Espelho-Moda-para-homens-gordos-acima-do-peso-4.jpg" 
+            alt="Pessoa levemente acima do peso ideal" style="width: 400px; height: 275px;">`;
+        } else {
+            id_caloria.innerHTML = "Bom, acho que muitos não vão te reconhecer após a quarentena";
+            div_imagem.innerHTML = `<img src="https://1.bp.blogspot.com/-T16KEp3B4yg/XO7FQXhN0QI/AAAAAAAB1iw/PvjUYFlOOQ4aST0mXUPvsrBGKRA6R6PmQCKgBGAs/s1600/IMG_8277.JPG" 
+            alt="Pessoa bem acima do peso ideal" style="width: 400px; height: 275px;">`;
+        }
+    }
+</script>

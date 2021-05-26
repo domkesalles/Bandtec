@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Insira a quantidade de lâmpadas necessárias: <input id="input_lamp">
+    <br>
+    Insira o valor médio da conta de luz: <input id="input_luz">
+    <br>
+    <button onclick="calcEconomia()">Calcular a economia</button>
+    <br>
+    <div id="id_economia">
+
+    </div>
+</body>
+</html>
+
+<script>
+    function calcEconomia() {
+        var lampadas = Number(input_lamp.value);
+        var luz = Number(input_luz.value);
+        var investimento = lampadas * 20;
+        var economia = 0.1 * luz;
+        var meses = investimento / economia;
+        id_economia.innerHTML = (`O seu investimento em lâmpadas será de R$${investimento}
+        <br>
+        A sua economia na conta de luz será de R$${economia}
+        <br>
+        Portanto, em ${meses} meses o seu investimento será retornado.`);
+    }
+</script>

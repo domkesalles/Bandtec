@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <div style="float: left; width: 50%;">
+            <img src="https://blog.cedrotech.com/wp-content/uploads/2018/03/avaliar-equipe-ti.jpg" alt="Equipe 1" 
+            style="width: 400px; height: 275px;">
+            <br>
+            Nome da equipe <input id="input_equipe1">
+            <br>
+            Nome do projeto <input id="input_projeto1">
+            <br>
+            Duração do projeto em dias <input id="input_dias1">
+            <br>
+            Custo total do projeto <input id="input_custo1">
+            <br>
+            Quantidade de horas do projeto <input id="input_horas1">
+        </div>
+        <div style="float: left; width: 50%;">
+            <img src="https://www.melhorinfra.com.br/wp-content/uploads/2020/02/titerceirizar-500x250.jpg" alt="Equipe 2"
+            style="width: 400px; height: 275px;">
+            <br>
+            Nome da equipe <input id="input_equipe2">
+            <br>
+            Nome do projeto <input id="input_projeto2">
+            <br>
+            Duração do projeto em dias <input id="input_dias2">
+            <br>
+            Custo total do projeto <input id="input_custo2">
+            <br>
+            Quantidade de horas do projeto <input id="input_horas2">
+            <br>
+        </div>
+        <br>
+        Referência de mercado do custo por hora para projeto de TI <input id="input_referencia">
+        <br>
+        <br>
+        <button onclick="analiseProjeto()"><b>Analisar os Projetos</b></button>
+        <br>
+        <div id="id_analise">
+
+        </div>
+        <div id="id_barra1">
+
+        </div>
+        <div id="id_barra2">
+
+        </div>
+        <br>
+        <br>
+        <div id="id_analise_barras">
+
+        </div>
+    </center>
+</body>
+</html>
+
+<script>
+    function analiseProjeto() {
+        var nomeEquipe1 = input_equipe1.value;
+        var nomeProjeto1 = input_projeto1.value;
+        var horasProjeto1 = Number(input_horas1.value);
+        var custoProjeto1 = Number(input_custo1.value);
+        var diasProjeto1 = Number(input_dias1.value);
+        var custoHoraProjeto1 = custoProjeto1 / horasProjeto1;
+        var horasDiaProjeto1 = horasProjeto1 / diasProjeto1;
+        var nomeEquipe2 = input_equipe2.value;
+        var nomeProjeto2 = input_projeto2.value;
+        var horasProjeto2 = Number(input_horas2.value);
+        var custoProjeto2 = Number(input_custo2.value);
+        var diasProjeto2 = Number(input_dias2.value);
+        var custoHoraProjeto2 = custoProjeto2 / horasProjeto2;
+        var horasDiaProjeto2 = horasProjeto2 / diasProjeto2;
+        var porcentagem = (custoHoraProjeto1 / custoHoraProjeto2) * 100;
+        var totalCustoHora = custoHoraProjeto1 + custoHoraProjeto2;
+        var largura1 = (custoHoraProjeto1 / totalCustoHora);
+        var largura2 = (custoHoraProjeto2 / totalCustoHora);
+        var refMercado = Number(input_referencia.value);
+        var percentual2 = (custoHoraProjeto1 / refMercado) * 100;
+        var percentual3 = (custoHoraProjeto2 / refMercado) * 100;
+        id_analise.innerHTML = (`<b>Análise de Tempo</b>
+<br>
+<br>
+O projeto ${nomeProjeto1} foi desenvolvido em <b style="color: red";>${horasProjeto1}</b> 
+horas num período de <b style="color: red";>${diasProjeto1}</b> dias, 
+portanto a equipe ${nomeEquipe1} trabalhou em média <b style="color: red";>${horasDiaProjeto1}</b> 
+horas por dia nesse projeto.
+<br>
+<br>
+O projeto ${nomeProjeto2} foi desenvolvido em <b style="color: blue";>${horasProjeto2}</b> 
+horas num período de <b style="color: blue";>${diasProjeto2}</b> dias, 
+portanto a equipe ${nomeEquipe2} trabalhou em média <b style="color: blue";>${horasDiaProjeto2}</b> 
+horas por dia nesse projeto.
+<br>
+<br>
+<b>Análise de Custos</b>
+<br>
+<br>
+A equipe ${nomeEquipe1} desenvolveu o projeto ${nomeProjeto1} em <b style="color: red";>${horasProjeto1}</b> 
+horas a um custo de R$ <b style="color: red";>${custoProjeto1}</b>, 
+portanto o custo por hora desse projeto é R$ <b style="color: red";>${custoHoraProjeto1}</b>
+<br>
+A equipe ${nomeEquipe2} desenvolveu o projeto ${nomeProjeto2} em <b style="color: blue";>${horasProjeto2}</b> 
+horas a um custo de R$ <b style="color: blue";>${custoProjeto2}</b>, 
+portanto o custo por hora desse projeto é R$ <b style="color: blue";>${custoHoraProjeto2}</b>
+<br>
+<br>
+<br>
+Observe que o custo por hora do projeto ${nomeProjeto1} é ${porcentagem}% do custo por hora do projeto ${nomeProjeto2}
+<br>`);
+        id_barra1.style.backgroundColor = "red";   
+        id_barra1.style.height = "30px";
+        id_barra1.style.width = (`${largura1 * 1000}px`);
+        id_barra1.style.float = "left";
+        id_barra2.style.backgroundColor = "blue";   
+        id_barra2.style.height = "30px";
+        id_barra2.style.width = (`${largura2 * 1000}px`);
+        id_barra2.style.float = "left";
+        id_analise_barras.innerHTML = (`Análise de Referência
+<br>
+<br>
+<br>
+O projeto ${nomeProjeto1} com custo por hora de R$ ${custoHoraProjeto1} 
+é ${percentual2}% em relação a referência de mercado ${refMercado}
+<br>
+O projeto ${nomeProjeto2} com custo por hora de R$ ${custoHoraProjeto2} 
+é ${percentual3}% em relação a referência de mercado ${refMercado}`);
+        }
+</script>
+
+<!-- 1000 - soma total
+x - projeto 
+
+-->

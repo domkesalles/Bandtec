@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="iniciaJogo()">Iniciar jogo</button>
+<br>
+<br>
+    <div id="div_lutador1" onclick="perdeVida1()"></div>
+<br>
+    <div id="div_vida_lutador1"></div>
+<br>
+    <div id="div_lutador2" onclick="perdeVida2()"></div>
+<br>
+    <div id="div_vida_lutador2"></div>
+<br>
+<br>
+    <span id="id_naruto">Golpes sofridos pelo Naruto: <b>0</b></span>
+<br>
+    <span id="id_sasuke">Golpes sofridos pelo Sasuke: <b>0</b></span>
+</body>
+</html>
+
+<script>
+    var contadorNaruto = 0;
+    var contadorSasuke = 0;
+    var larguraNaruto = 100;
+    var larguraSasuke = 100;
+
+    function iniciaJogo() {
+        div_lutador1.innerHTML = `<img src="https://http2.mlstatic.com/D_NQ_NP_685083-MLB27451505243_052018-O.jpg" 
+        alt= "Naruto usando o Rasengan" style="width: 190px; height: 275px;">`;
+
+        div_vida_lutador1.style.backgroundColor = "green";   
+        div_vida_lutador1.style.height = "30px";
+
+        div_lutador2.innerHTML = `<img src="https://www.kindpng.com/picc/m/222-2221910_sasuke-chidori-narutoshippuden-naruto-ultimate-ninja-storm-generations.png" 
+        alt= "Sasuke usando o Chidori" style="width: 190px; height: 275px;">`;
+
+        div_vida_lutador2.style.backgroundColor = "green";   
+        div_vida_lutador2.style.height = "30px";
+    }
+
+    function perdeVida1() {
+        ++contadorNaruto;
+        larguraNaruto -= 5;
+
+        id_naruto.innerHTML = `Golpes sofridos pelo Naruto: <b>${contadorNaruto}</b>`;
+        div_vida_lutador1.style.width = `${larguraNaruto}%`;
+    }
+
+    function perdeVida2() {
+        ++contadorSasuke;
+        larguraSasuke -= 5;
+
+        id_sasuke.innerHTML = `Golpes sofridos pelo Sasuke: <b>${contadorSasuke}</b>`;
+        div_vida_lutador2.style.width = `${larguraSasuke}%`;
+    }
+</script>

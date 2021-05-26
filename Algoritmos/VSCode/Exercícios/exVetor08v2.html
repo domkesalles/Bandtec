@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    Insira as notas dos alunos: <input id="in_nota">
+    <br>
+    <button onclick="cadastraNota()">Cadastrar nota</button>
+    <br>
+    <br>
+    Insira a nota mínima: <input id="in_notamin">
+    <br>
+    Insira a nota máxima: <input id="in_notamax">
+    <br>
+    <button onclick="reveNotas()">Rever notas</button>
+    <br>
+    <span id="id_notas"></span>
+</body>
+
+</html>
+
+<script>
+    var listaNotas = [];
+
+    function cadastraNota() {
+        var nota = Number(in_nota.value);
+        listaNotas.push(nota);
+    }
+
+    function reveNotas() {
+        var notaMin = Number(in_notamin.value);
+        var notaMax = Number(in_notamax.value);
+        var listaIntervalo = [];
+
+        id_notas.innerHTML = "<b>Notas inseridas</b><br>";
+
+        for (var contador = 0; contador < listaNotas.length; contador++) {
+            id_notas.innerHTML += `${listaNotas[contador]}<br>`;
+        }
+
+        for (var contador = 0; contador < listaNotas.length; contador++) {
+            var notaAtual = listaNotas[contador];
+
+            if (notaAtual >= notaMin && notaAtual <= notaMax) {
+                listaIntervalo.push(notaAtual);
+            }
+        }
+
+        var acumulador = 0;
+
+        for (var contador = 0; contador < listaIntervalo.length; contador++) {
+            acumulador += listaIntervalo[contador];
+        }
+
+        var media = acumulador / listaIntervalo.length;
+
+        id_notas.innerHTML += `<br>Foram cadastradas ${listaIntervalo.length} notas que estão de ${notaMin} até ${notaMax} e a média dessas notas é ${media}`;
+    }
+</script>

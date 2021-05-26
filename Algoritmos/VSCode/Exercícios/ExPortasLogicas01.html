@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <select id="selectA">
+        <option value="0">Parado</option>
+        <option value="1">Andando</option>
+    </select>
+    <select id="selectB">
+        <option value="0">Parado</option>
+        <option value="1">Andando</option>
+    </select>
+    <br>
+    <br>
+    <button onclick="simula()">Simular</button>
+</body>
+
+</html>
+
+<script>
+    function simula() {
+        var total = Number(selectA.value) + Number(selectB.value);
+
+        if (total == 2) {
+            alert("Risco de colisão!");
+        } else if (total == 0) {
+            alert("Risco de engarrafamento");
+        } else {
+            alert("Fluxo perfeito!");
+        }
+    }
+</script>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <select id="select_convidadosA">
+        <option value="0">Carnes e derivados de animais</option>
+        <option value="1">Apenas opções veganas</option>
+    </select>
+    <select id="select_convidadosB">
+        <option value="0">Carnes e derivados de animais</option>
+        <option value="1">Apenas opções veganas</option>
+    </select>
+    <br>
+    <br>
+    <button onclick="verifica()">Verificar</button>
+</body>
+
+</html>
+
+<script>
+    function verifica() {
+        var convidadoA = Number(select_convidadosA.value);
+        var convidadoB = Number(select_convidadosB.value);
+        var total = convidadoA + convidadoB;
+
+        if (total == 2) {
+            alert("Para uma taxa de sucesso de 100% dessa festa, é melhor ir de veggie ;)");
+        } else if (total == 0) {
+            alert("Tá tudo liberado, pode servir o que quiser :D");
+        } else {
+            alert("A festa tem uma probabilidade de fracasso de 83%");
+        }
+    }
+</script>

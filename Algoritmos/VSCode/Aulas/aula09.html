@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <spam style="background-color: black; color: yellow;" id="mensagem_exibida">
+    </span>
+    <br>
+    <button onclick="falar_uma_verdade()">Falar uma verdade</button>
+</body>
+</html>
+
+<script>
+
+    // innerHTML
+    function falar_uma_verdade() {
+        mensagem_exibida.innerHTML = "<s>A DC é melhor que a Marvel</s>";
+        mensagem_exibida.style.color = "white";
+        mensagem_exibida.style.backgroundColor = "purple";
+        mensagem_exibida.style.fontSize = "48px";
+        // background-color
+        // font-size
+    }
+
+</script>

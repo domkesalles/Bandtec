@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    Insira a fruta: <input id="in_fruta">
+    <br>
+    <button onclick="adicionaFruta()">Adicionar fruta</button>
+    <button onclick="veNota()">Ver nota fiscal</button>
+    <br>
+    <div id="div_fruta"></div>
+    <br>
+    <div id="div_nota1"></div>
+    <div id="div_nota2"></div>
+</body>
+
+</html>
+
+<script>
+    var contador = 0;
+    var preco = 0;
+    var fruta = 0;
+    var primeiraFruta = 0;
+
+    function adicionaFruta() {
+        fruta = in_fruta.value;
+        div_fruta.style.display = "block";
+        div_fruta.innerHTML += `${fruta}<br>`;
+        contador++;
+
+        if (contador == 1) {
+            var primeiraFruta = fruta;
+            div_nota1.innerHTML = `A primeira fruta é ${primeiraFruta}<br>`;
+        }
+        div_nota1.style.display = "none";
+        div_nota2.style.display = "none";
+    }
+
+    function veNota() {
+        fruta = in_fruta.value;
+        div_nota1.style.display = "block";
+        div_nota2.style.display = "block";
+        div_fruta.style.display = "none";
+        preco = contador * 2.5;
+        div_nota2.innerHTML = `A última fruta é ${fruta}<br>
+        O preço total é ${preco}<br>
+        A quantidade de frutas é ${contador}<br>`;
+    }
+</script>

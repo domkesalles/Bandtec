@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Quantidade de votos recebidos por Zé Buduia: <input id="input_qntd_buduia">
+    <br>
+    Quantidade de votos recebidos por Maria Bigodenha: <input id="input_qntd_maria">
+    <br>
+    Quantidade de votos brancos: <input id="input_qntd_brancos">
+    <br>
+    Quantidade de votos nulos: <input id="input_qntd_nulos">
+    <br>
+    <button onclick="eleicao()">Resultado da Eleição</button>
+    <br>
+    <div id= "id_buduia"></div>
+    <div id= "id_bbarra"></div>
+    <div id= "id_maria"></div>
+    <div id= "id_mbarra"></div>
+    <div id= "id_inv"></div>
+    <div id= "id_ibarra"></div>
+</body>
+</html>
+
+<script>
+    function eleicao() {
+        
+        var buduia = Number(input_qntd_buduia.value);
+        var maria = Number(input_qntd_maria.value);
+        var brancos = Number(input_qntd_brancos.value);
+        var nulos = Number(input_qntd_nulos.value);
+        id_buduia.innerHTML = (`<b>Total de votos: <u>${buduia + maria + brancos + nulos}</u>
+            <br>
+            Zé Buduia:</b> ${(buduia / (buduia + maria + brancos + nulos)) * 100}% (${buduia} votos)
+            <br>`)
+        id_bbarra.style.backgroundColor = "green";
+        id_bbarra.style.height = "30px";
+        id_bbarra.style.width = (`${(buduia / (buduia + maria + brancos + nulos)) * 100}%`);
+        id_maria.innerHTML = (`<b>Maria:</b> ${(maria / (buduia + maria + brancos + nulos)) * 100}% (${maria} votos)
+            <br>`)
+        id_mbarra.style.backgroundColor = "red";
+        id_mbarra.style.height = "30px";
+        id_mbarra.style.width = (`${(maria / (buduia + maria + brancos + nulos)) * 100}%`);
+        id_inv.innerHTML = (`<b>Maria:</b> ${((brancos + nulos) / (buduia + maria + brancos + nulos)) * 100}% (${brancos + nulos} votos)
+            <br>`)
+        id_ibarra.style.backgroundColor = "grey";
+        id_ibarra.style.height = "30px";
+        id_ibarra.style.width = (`${((brancos + nulos) / (buduia + maria + brancos + nulos)) * 100}%`);
+    }
+</script>

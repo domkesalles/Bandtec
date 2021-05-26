@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    Insira ou pesquise alunos: <input id="in_aluno">
+    <br>
+    <button onclick="cadastro()">Cadastrar ou pesquisar</button>
+    <br>
+    <span id="id_aluno"><b>LISTA DE ALUNOS</b>
+        <br>
+    </span>
+</body>
+
+</html>
+
+<script>
+    var listaAluno = [];
+    
+    function cadastro() {
+        if (listaAluno.indexOf(in_aluno.value) > -1) {
+            alert(`O aluno ${in_aluno.value} já existe na lista`);
+        } else {
+            listaAluno.push(in_aluno.value);
+            id_aluno.innerHTML = "<b>LISTA DE ALUNOS</b><br>";
+
+            for (var contador = 0; contador < listaAluno.length; contador++) {
+                id_aluno.innerHTML += `${listaAluno[contador]}<br>`;
+            }
+        }
+    }
+</script>

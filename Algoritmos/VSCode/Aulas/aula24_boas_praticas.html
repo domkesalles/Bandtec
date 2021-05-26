@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    Insira o nome do aluno: <input id="in_nomeAluno">
+    <br>
+    <button onclick="cadastrarAluno()">Cadastrar aluno</button>
+    <br>
+    <span id="id_listaAlunos"></span>
+    <br>
+    <br>
+    <span id="id_alunosPar"></span>
+    <br>
+    <br>
+    <span id="id_alunosInverso"></span>
+</body>
+
+</html>
+
+<script>
+    var listaAlunos = [];
+
+    function cadastrarAluno() {
+        listaAlunos.push(in_nomeAluno.value);
+        mostrarLista();
+    }
+
+    function mostrarLista() {
+        id_listaAlunos.innerHTML = "";
+
+        for (var contador = 0; contador < listaAlunos.length; contador++) {
+            id_listaAlunos.innerHTML += `${listaAlunos[contador]}<br>`;
+        }
+
+        mostrarPar();
+    }
+
+    function mostrarPar() {
+        id_alunosPar.innerHTML = "";
+
+        for (var contador = 0; contador < listaAlunos.length; contador++) {
+            if (contador % 2 == 0) {
+                id_alunosPar.innerHTML += `${listaAlunos[contador]}<br>`;
+            }
+        }
+
+        mostrarInversa();
+    }
+
+    function mostrarInversa() {
+        id_alunosInverso.innerHTML = "";
+
+        for (var contador = listaAlunos.length - 1; contador >= 0; contador--) {
+            id_alunosInverso.innerHTML += `${listaAlunos[contador]}<br>`;
+        }
+    }
+</script>

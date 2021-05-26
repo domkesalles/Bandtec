@@ -1,0 +1,23 @@
+#div_principal {
+    height: 500px;
+    background-color: red;
+    display: flex;
+}
+
+#div_esquerda {
+    height: 100px;
+    width: 50%;
+    background-color: blue;
+}
+
+#div_meio{
+    height: 100px;
+    width: 50%;
+    background-color: orange;
+}
+
+#div_direita{
+    height: 100px;
+    width: 50%;
+    background-color: yellow;
+}

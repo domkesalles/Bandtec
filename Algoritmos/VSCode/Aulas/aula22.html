@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    Digite a frase aqui: <input id="in_frase">
+    <br>
+    <button onclick="repetirFrase()">Repetir frase</button>
+    <br>
+    <div id="div_resultado"></div>
+</body>
+
+</html>
+
+<script>
+    function repetirFrase() {
+        // while - enquanto;
+        var contador = 0;
+        while (contador < 10) {
+            div_resultado.innerHTML += `${in_frase.value}<br>`;
+            contador++;
+        }
+    }
+</script>

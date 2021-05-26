@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    Insira o nome da linha de ônibus: <input id="in_linha">
+    <br>
+    <button onclick="gravaBuzo()">Gravar buzão</button>
+    <button onclick="pesquisa()">Pesquisar</button>
+    <br>
+    <span id="id_onibus"></span>
+    <br>
+    <span id="id_qtdVezes"></span>
+</body>
+
+</html>
+
+<script>
+    var listaOnibus = [];
+
+    function gravaBuzo() {
+        listaOnibus.push(in_linha.value);
+        mostraLista();
+    }
+     
+    function mostraLista() {
+        id_onibus.innerHTML = "<b>LINHAS DE ÔNIBUS</b><br>";
+        
+        for (contador = 0; contador < listaOnibus.length; contador++) {
+            id_onibus.innerHTML += `${listaOnibus[contador]}<br>`;
+        }
+    }
+
+    function pesquisa() {
+        var onibus = in_linha.value;
+        var posicao = [];
+
+        for (var contador = 0; contador < listaOnibus.length; contador++) {
+            id_qtdVezes.innerHTML = "";
+
+            if (listaOnibus[contador].toUpperCase() == onibus.toUpperCase()) {
+                posicao.push(contador + 1);
+                id_qtdVezes.innerHTML += `<br>Você já pegou essa linha ${posicao.length} vezes, nessa ordem: ${posicao}`;
+            } else {
+                id_qtdVezes.innerHTML += "Você nunca pegou essa linha";
+            }
+        }
+    }
+</script>

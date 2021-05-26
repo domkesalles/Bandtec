@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Insira o valor do carro à vista: <input id="in_vista">
+<br>
+    Insira a taxa de juros ao mês: <input id="in_juros">
+<br>
+    Insira a quantidade de parcelas: <input id="in_parcelas">
+<br>
+    <button onclick="calculoPrejuizo()">Calcular prejú</button>
+<br>
+    <span id="id_pg"></span>
+</body>
+</html>
+
+<script>
+    function calculoPrejuizo() {
+        var vista = Number(in_vista.value);
+        var juros = Number(in_juros.value);
+        var parcelas = Number(in_parcelas.value);
+        var mensal = vista / parcelas;
+        var parcelasJuros = (juros / 100) * vista;
+        var parcelaFinal = mensal + parcelasJuros;
+        var valorFinal = parcelaFinal * parcelas;
+        var prejuizo = (80 / 100) * vista;
+        var qtdCarros = valorFinal / vista;
+
+        id_pg.innerHTML =  `Seu carro vai sair por um total de R$${valorFinal.toFixed(2)}. 
+        Após 1 mês, ele já vai valer só R$${prejuizo.toFixed(2)}. 
+        Porque comprou financiado, vai pagar o correspondente a ${qtdCarros.toFixed(1)} carros.`;
+    }
+</script>

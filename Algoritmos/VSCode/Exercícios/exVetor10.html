@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    Digite um número qualquer: <input id="in_numero">
+    <br>
+    <button onclick="analisaHistorico()">Analisar histórico</button>
+    <br>
+    <span id="id_historico"></span>
+</body>
+
+</html>
+
+<script>
+    var listaHistorico = [];
+
+    function analisaHistorico() {
+        listaHistorico.push(Number(in_numero.value));
+        id_historico.innerHTML = "";
+        var numeroMax = listaHistorico[0];
+        var numeroMin = listaHistorico[0];
+
+        for (contador = 0; contador < listaHistorico.length; contador++) {
+            var numero = listaHistorico[contador];
+
+            if (numero > numeroMax) {
+                numeroMax = numero;
+            }
+
+            if (numero < numeroMin) {
+                numeroMin = numero;
+            }
+
+            id_historico.innerHTML += `${contador + 1}º Número: ${numero}<br>`;
+        }
+        
+        id_historico.innerHTML += `<br>Maior: ${numeroMax}<br>
+        Menor: ${numeroMin}`;
+    }
+</script>

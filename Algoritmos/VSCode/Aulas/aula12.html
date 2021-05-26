@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Nome: <input id="input_nome"  placeholder="Digite o seu nome">
+    <br>
+    Bairro: <input id="input_bairro" placeholder="Digite o bairro em que mora">
+    <br>
+    Idade: <input id="input_idade" placeholder="Digite sua idade">
+    <br>
+    <button onclick="relatorio()">Relatório</button>
+    <button onclick="relatorio_bonito()"> Relatório Bonito</button>
+</body>
+</html>
+
+<script>
+    function relatorio() {
+        alert(`Seu nome é ${input_nome.value}`);
+        alert(`Você mora no bairro ${input_bairro.value}`);
+        alert(`Sua idade atual é ${input_idade.value}`);
+    }
+
+    function relatorio_bonito() {
+        alert(`Seu nome é ${input_nome.value}, você mora no bairro ${input_bairro.value} e sua idade atual é ${input_idade.value}`)
+    }
+</script>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Digite a quantidade de maçãs: <input id="input_qtd_macas">
+    <br>
+    <button onclick="finalizar_compra()">Finalizar compra</button>
+</body>
+</html>
+
+<script>
+
+function finalizar_compra() {
+    var quantidade_macas = Number(input_qtd_macas.value);
+    var custo_unidade = 0.75;
+
+    if (quantidade_macas >= 10) {
+        custo_unidade = 0.68;
+    }
+
+    var total_compra = quantidade_macas * custo_unidade;
+    alert(`Total a pagar: ${total_compra}`);
+}
+
+</script>

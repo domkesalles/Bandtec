@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Insira a quantidade de partidas jogadas pelo atacante: <input id="in_partidas">
+<br>
+    Insira o número de gols marcados pelo atacante: <input id="in_gols">
+<br>
+    <button onclick="estudaAtacante()">Estudar atacante</button>
+<br>
+    <div id="id_jogador"></div>
+</body>
+</html>
+
+<script>
+    function estudaAtacante() {
+        var partida = Number(in_partidas.value);
+        var gol = Number(in_gols.value);
+        var media = gol /partida;
+
+        if (media.toFixed(1) < 0.2) {
+            id_jogador.innerHTML = `Melhor mudar de posição
+            <br>
+            <img src="https://conteudo.imguol.com.br/c/esporte/cc/2020/09/13/ribamar-comemora-seu-gol-pelo-vasco-contra-o-botafogo-em-jogo-do-brasileirao-2020-1600043895388_v2_1920x1280.jpg" 
+        alt="Jogador bem ruim" style="width: 400px; height: 275px;">`;
+        } else {
+            if (media.toFixed(1) > 0.6) {
+                id_jogador.innerHTML = `Atacante de futuro
+            <br>
+            <img src="https://3.bp.blogspot.com/-yx0MOtKPnQM/XmEbDeQ0_BI/AAAAAAABzI4/6iwIUVWn0qkzUcI7r0ToNj95V-DEOV42wCLcBGAsYHQ/s1600/f8e46c63c09fbb594e68bc66aa8f7ba0.jpg" 
+        alt="Bom jogador" style="width: 400px; height: 275px;">`;
+            } else {
+            id_jogador.innerHTML = `Atacante mediano
+            <br>
+            <img src="https://tntsports.com.br/__export/1583458547984/sites/esporteinterativo/img/2020/03/05/pablo_sao_paulo.jpg_252488652.jpg" 
+        alt="Jogador comum" style="width: 400px; height: 275px;">`;
+            }
+        }
+    }
+</script>

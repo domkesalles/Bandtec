@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <span id="id_pao">Porções de pão francês: 0</span>
+<br>
+    <span id="id_bovina">Porções de carne boniva: 0</span>
+<br>
+    <span id="id_soja">Porções de carne de soja: 0</span>
+<br>
+    <span id="id_arroz">Porções de arroz com feijão: 0</span>
+<br>
+    <span id="id_total">Total de calorias: 0</span>
+<br>
+    <button onclick="comePao()">Comer um pão francês</button>
+    <button onclick="comeBovina()">Comer porção de carne bovina</button>
+    <button onclick="comeSoja()">Comer porção de carne de soja</button>
+    <button onclick="comeArroz()">Comer porção de arroz com feijão</button>
+<br>
+<br>
+    <button onclick="recomeca()">Recomeçar</button>
+</body>
+</html>
+
+<script>
+    var total = 0;
+    var contadorPao = 0;
+    var contadorBovina = 0;
+    var contadorSoja = 0;
+    var contadorArroz = 0;
+
+    function comePao() {
+        ++contadorPao;
+        total += 50;
+
+        id_pao.innerHTML = `Porções de pão francês: ${contadorPao}`;
+        id_total.innerHTML = `Total de calorias: ${total}`;
+    }
+
+    function comeBovina() {
+        ++contadorBovina;
+        total += 100;
+
+        id_bovina.innerHTML = `Porções de carne bovina: ${contadorBovina}`;
+        id_total.innerHTML = `Total de calorias: ${total}`;
+    }
+
+    function comeSoja() {
+        ++contadorSoja;
+        total += 30;
+
+        id_soja.innerHTML = `Porções de carne de soja: ${contadorSoja}`;
+        id_total.innerHTML = `Total de calorias: ${total}`;
+    }
+
+    function comeArroz() {
+        ++contadorArroz;
+        total += 120;
+
+        id_arroz.innerHTML = `Porções de arroz com feijão: ${contadorArroz}`;
+        id_total.innerHTML = `Total de calorias: ${total}`;
+    }
+
+    function recomeca() {
+        id_pao.innerHTML = 'Porções de pão francês: 0';
+        id_bovina.innerHTML = 'Porções de carne boniva: 0';
+        id_soja.innerHTML = 'Porções de carne de soja: 0';
+        id_arroz.innerHTML = 'Porções de arroz com feijão: 0';
+        id_total.innerHTML = 'Total de calorias: 0';
+
+        total = 0;
+        contadorPao = 0;
+        contadorBovina = 0;
+        contadorSoja = 0;
+        contadorArroz = 0;
+    }
+</script>

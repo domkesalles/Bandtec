@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    Vingadores: <br>
+    Capitão América <br>
+    <b id="b_pantera">Pantera Negra</b> <br>
+    Hulk <br>
+    <i id="i_aranha">Homem Aranha</i> <br>
+    Homem de Ferro <br>
+    <span id="span_estranho">Dr. Estranho</span> <br>
+
+    <div>Metade dos seres vivos sortudos</div>
+    <div id="div_azarados">
+        Metade dos seres vivos azarados
+    </div>
+
+    <button onclick="thanos()">
+        You should have gone for the head!
+    </button>
+</body>
+</html>
+<script>
+    function thanos() {
+        b_pantera.innerHTML = "";
+        i_aranha.innerHTML = "";
+        span_estranho.innerHTML = "";
+        div_azarados.innerHTML = "";
+    }
+</script>

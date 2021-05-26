@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    Insira a renda individual: <input id="in_renda">
+    <br>
+    Insira a renda total familiar: <input id="in_total">
+    <br>
+    <br>
+    <button onclick="verificaAjuda()">Verificar ajuda</button>
+</body>
+
+</html>
+
+<script>
+    function verificaAjuda() {
+        var individual = Number(in_renda.value);
+        var total = Number(in_total.value);
+
+        if (individual <= 1050 && total <= 2100) {
+            alert("Você terá direito!");
+        } else {
+            alert("Você NÃO terá direito!");
+        }
+    }
+</script>
