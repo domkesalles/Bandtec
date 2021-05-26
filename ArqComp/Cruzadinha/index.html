@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palavras Cruzadas</title>
+</head>
+
+<body>
+    <h1>Palavras Cruzadas</h1>
+    <table>
+        <tr>
+            <td><input class='Desativado' disabled></td>
+            <td><input class='Desativado' disabled></td>
+            <td><input class='Desativado' disabled></td>
+            <td><input class='Desativado' disabled></td>
+            <td><input class='Desativado' disabled></td>
+            <td><input class='Desativado' disabled></td>
+            <td><input class='Desativado' disabled></td>
+            <td><input class='Desativado' disabled></td>
+            <td><input class='Desativado' disabled></td>
+            <td><input class='Desativado' placeholder='6.' disabled></td>
+            <td><input class='Desativado' disabled></td>
+            <td><input class='Desativado' disabled></td>
+            <td><input class='Desativado' disabled></td>
+            <td><input class='Desativado' disabled></td>
+        </tr>
+        <tr>
+            <td><input class='Desativado' disabled></td>
+            <td><input class='Desativado' disabled></td>
+            <td><input class='Desativado' disabled></td>
+            <td><input class='Desativado' disabled></td>
+            <td><input class='Desativado' disabled></td>
+            <td><input class='Desativado' disabled></td>
+            <td><input class='Desativado' disabled></td>
+            <td><input class='Desativado' disabled></td>
+            <td><input class='Desativado' disabled></td>
+            <td><input type="text" id='Campo1' onkeyup="verifica(5)" maxlength="1"></td>
+            <td><input class='Desativado' disabled></td>
+            <td><input class='Desativado' disabled></td>
+            <td><input class='Desativado' placeholder='2.' disabled></td>
+            <td><input class='Desativado' disabled></td>
+        </tr>
+        <tr>
+            <td><input class='Desativado' disabled></td>
+            <td><input class='Desativado' disabled></td>
+            <td><input class='Desativado' disabled></td>
+            <td><input class='Desativado' disabled></td>
+            <td><input class='Desativado' disabled></td>
+            <td><input class='Desativado' disabled></td>
+            <td><input class='Desativado' disabled></td>
+            <td><input class='Desativado' placeholder='3.' disabled></td>
+            <td><input class='Desativado' disabled></td>
+            <td><input type="text" id='Campo2' onkeyup="verifica(5)" maxlength="1"></td>
+            <td><input class='Desativado' disabled></td>
+            <td><input class='Desativado' disabled></td>
+            <td><input type="text" id='Campo3' onkeyup="verifica(1)" maxlength="1"></td>
+            <td><input class='Desativado' disabled></td>
+        </tr>
+        <tr>
+            <td><input class='Desativado' disabled></td>
+            <td><input class='Desativado' disabled></td>
+            <td><input class='Desativado' disabled></td>
+            <td><input class='Desativado' disabled></td>
+            <td><input class='Desativado' disabled></td>
+            <td><input class='Desativado' disabled></td>
+            <td><input class='Desativado' disabled></td>
+            <td><input type="text" id='Campo4' onkeyup="verifica(2)" maxlength="1"></td>
+            <td><input class='Desativado' disabled></td>
+            <td><input type="text" id='Campo5' onkeyup="verifica(5)" maxlength="1"></td>
+            <td><input class='Desativado' disabled></td>
+            <td><input class='Desativado' placeholder='14.' disabled></td>
+            <td><input type="text" id='Campo6' onkeyup="verifica(1)" maxlength="1"></td>
+            <td><input class='Desativado' disabled></td>
+        </tr>
+        <tr>
+            <td><input class='Desativado' disabled></td>
+            <td><input class='Desativado' disabled></td>
+            <td><input class='Desativado' disabled></td>
+            <td><input class='Desativado' disabled></td>
+            <td><input class='Desativado' disabled></td>
+            <td><input class='Desativado' placeholder='8.' disabled></td>
+            <td><input type="text" id='Campo7' onkeyup="verifica(7)" maxlength="1"></td>
+            <td><input type="text" id='Campo8' onkeyup="verifica(2); verifica(7)" maxlength="1"></td>
+            <td><input type="text" id='Campo9' onkeyup="verifica(7)" maxlength="1"></td>
+            <td><input type="text" id='Campo10' onkeyup="verifica(5); verifica(7)" maxlength="1"></td>
+            <td><input type="text" id='Campo11' onkeyup="verifica(7)" maxlength="1"></td>
+            <td><input type="text" id='Campo12' onkeyup="verifica(7); verifica(13)" maxlength="1"></td>
+            <td><input type="text" id='Campo13' onkeyup="verifica(1); verifica(7)" maxlength="1"></td>
+            <td><input class='Desativado' disabled></td>
+        </tr>
+        <tr>
+            <td><input class='Desativado' disabled></td>
+            <td><input class='Desativado' disabled></td>
+            <td><input class='Desativado' disabled></td>
+            <td><input class='Desativado' disabled></td>
+            <td><input class='Desativado' disabled></td>
+            <td><input class='Desativado' disabled></td>
+            <td><input class='Desativado' disabled></td>
+            <td><input type="text" id='Campo14' onkeyup="verifica(2)" maxlength="1"></td>
+            <td><input class='Desativado' disabled></td>
+            <td><input type="text" id='Campo15' onkeyup="verifica(5)" maxlength="1"></td>
+            <td><input class='Desativado' disabled></td>
+            <td><input type="text" id='Campo16' onkeyup="verifica(13)" maxlength="1"></td>
+            <td><input class='Desativado' disabled></td>
+            <td><input class='Desativado' disabled></td>
+        </tr>
+        <tr>
+            <td><input class='Desativado' disabled></td>
+            <td><input class='Desativado' disabled></td>
+            <td><input class='Desativado' disabled></td>
+            <td><input class='Desativado' disabled></td>
+            <td><input class='Desativado' disabled></td>
+            <td><input class='Desativado' disabled></td>
+            <td><input class='Desativado' placeholder='13.' disabled></td>
+            <td><input type="text" id='Campo17' onkeyup="verifica(2); verifica(12)" maxlength="1"></td>
+            <td><input type="text" id='Campo18' onkeyup="verifica(12)" maxlength="1"></td>
+            </td>
+            <td><input class='Desativado' disabled></td>
+            <td><input class='Desativado' disabled></td>
+            <td><input class='Desativado' disabled></td>
+            <td><input class='Desativado' disabled></td>
+            <td><input class='Desativado' disabled></td>
+        </tr>
+        <tr>
+            <td><input class='Desativado' disabled></td>
+            <td><input class='Desativado' disabled></td>
+            <td><input class='Desativado' disabled></td>
+            <td><input class='Desativado' disabled></td>
+            <td><input class='Desativado' disabled></td>
+            <td><input class='Desativado' placeholder='15.' disabled></td>
+            <td><input class='Desativado' disabled></td>
+            <td><input type="text" id='Campo19' onkeyup="verifica(2)" maxlength="1"></td>
+            <td><input class='Desativado' disabled></td>
+            <td><input class='Desativado' disabled></td>
+            <td><input class='Desativado' disabled></td>
+            <td><input class='Desativado' disabled></td>
+            <td><input class='Desativado' disabled></td>
+            <td><input class='Desativado' disabled></td>
+        </tr>
+        <tr>
+            <td><input class='Desativado' disabled></td>
+            <td><input class='Desativado' disabled></td>
+            <td><input class='Desativado' disabled></td>
+            <td><input class='Desativado' placeholder='10.' disabled></td>
+            <td><input class='Desativado' placeholder='12.' disabled></td>
+            <td><input type="text" id='Campo20' onkeyup="verifica(11)" maxlength="1"></td>
+            <td><input type="text" id='Campo21' onkeyup="verifica(11)" maxlength="1"></td>
+            <td><input type="text" id='Campo22' onkeyup="verifica(2); verifica(11)" maxlength="1"></td>
+            <td><input type="text" id='Campo23' onkeyup="verifica(11); verifica(14)" maxlength="1"></td>
+            <td><input class='Desativado' disabled></td>
+            <td><input class='Desativado' disabled></td>
+            <td><input class='Desativado' disabled></td>
+            <td><input class='Desativado' disabled></td>
+            <td><input class='Desativado' disabled></td>
+        </tr>
+        <tr>
+            <td><input class='Desativado' disabled></td>
+            <td><input class='Desativado' disabled></td>
+            <td><input class='Desativado' placeholder='1.' disabled></td>
+            <td><input type="text" id='Campo24' onkeyup="verifica(0); verifica(9)" maxlength="1"></td>
+            <td><input type="text" id='Campo25' onkeyup="verifica(0)" maxlength="1"></td>
+            <td><input type="text" id='Campo26' onkeyup="verifica(0); verifica(14)" maxlength="1"></td>
+            <td><input class='Desativado' disabled></td>
+            <td><input type="text" id='Campo27' onkeyup="verifica(2)" maxlength="1"></td>
+            <td><input class='Desativado' disabled></td>
+            <td><input class='Desativado' disabled></td>
+            <td><input class='Desativado' disabled></td>
+            <td><input class='Desativado' disabled></td>
+            <td><input class='Desativado' disabled></td>
+            <td><input class='Desativado' disabled></td>
+        </tr>
+        <tr>
+            <td><input class='Desativado' disabled></td>
+            <td><input class='Desativado' disabled></td>
+            <td><input class='Desativado' disabled></td>
+            <td><input type="text" id='Campo28' onkeyup="verifica(9)" maxlength="1"></td>
+            <td><input class='Desativado' disabled></td>
+            <td><input type="text" id='Campo29' onkeyup="verifica(14)" maxlength="1"></td>
+            <td><input class='Desativado' disabled></td>
+            <td><input type="text" id='Campo30' onkeyup="verifica(2)" maxlength="1"></td>
+            <td><input class='Desativado' disabled></td>
+            <td><input class='Desativado' placeholder='4.' disabled></td>
+            <td><input class='Desativado' disabled></td>
+            <td><input class='Desativado' disabled></td>
+            <td><input class='Desativado' disabled></td>
+            <td><input class='Desativado' disabled></td>
+        </tr>
+        <tr>
+            <td><input class='Desativado' disabled></td>
+            <td><input class='Desativado' disabled></td>
+            <td><input class='Desativado' placeholder='16.' disabled></td>
+            <td><input class='Desativado' disabled></td>
+            <td><input class='Desativado' disabled></td>
+            <td><input type="text" id='Campo31' onkeyup="verifica(14)" maxlength="1"></td>
+            <td><input class='Desativado' disabled></td>
+            <td><input type="text" id='Campo32' onkeyup="verifica(2)" maxlength="1"></td>
+            <td><input class='Desativado' disabled></td>
+            <td><input type="text" id='Campo33' onkeyup="verifica(3)" maxlength="1"></td>
+            <td><input class='Desativado' disabled></td>
+            <td><input class='Desativado' disabled></td>
+            <td><input class='Desativado' disabled></td>
+            <td><input class='Desativado' disabled></td>
+        </tr>
+        <tr>
+            <td><input class='Desativado' disabled></td>
+            <td><input class='Desativado' disabled></td>
+            <td><input type="text" id='Campo34' onkeyup="verifica(15)" maxlength="1"></td>
+            <td><input class='Desativado' disabled></td>
+            <td><input class='Desativado' disabled></td>
+            <td><input class='Desativado' disabled></td>
+            <td><input class='Desativado' disabled></td>
+            <td><input type="text" id='Campo35' onkeyup="verifica(2)" maxlength="1"></td>
+            <td><input class='Desativado' disabled></td>
+            <td><input type="text" id='Campo36' onkeyup="verifica(3)" maxlength="1"></td>
+            <td><input class='Desativado' disabled></td>
+            <td><input class='Desativado' disabled></td>
+            <td><input class='Desativado' disabled></td>
+            <td><input class='Desativado' disabled></td>
+        </tr>
+        <tr>
+            <td><input class='Desativado' disabled></td>
+            <td><input class='Desativado' disabled></td>
+            <td><input type="text" id='Campo37' onkeyup="verifica(15)" maxlength="1"></td>
+            <td><input class='Desativado' disabled></td>
+            <td><input class='Desativado' disabled></td>
+            <td><input class='Desativado' disabled></td>
+            <td><input class='Desativado' placeholder='5.' disabled></td>
+            <td><input type="text" id='Campo38' onkeyup="verifica(2); verifica(4)" maxlength="1"></td>
+            <td><input type="text" id='Campo39' onkeyup="verifica(4)" maxlength="1"></td>
+            <td><input type="text" id='Campo40' onkeyup="verifica(3); verifica(4)" maxlength="1"></td>
+            <td><input class='Desativado' disabled></td>
+            <td><input class='Desativado' disabled></td>
+            <td><input class='Desativado' disabled></td>
+            <td><input class='Desativado' disabled></td>
+        </tr>
+        <tr>
+            <td><input class='Desativado' disabled></td>
+            <td><input class='Desativado' disabled></td>
+            <td><input type="text" id='Campo41' onkeyup="verifica(15)" maxlength="1"></td>
+            <td><input class='Desativado' placeholder='9.' disabled></td>
+            <td><input class='Desativado' disabled></td>
+            <td><input class='Desativado' disabled></td>
+            <td><input class='Desativado' disabled></td>
+            <td><input type="text" id='Campo42' onkeyup="verifica(2)" maxlength="1"></td>
+            <td><input class='Desativado' disabled></td>
+            <td><input class='Desativado' disabled></td>
+            <td><input class='Desativado' disabled></td>
+            <td><input class='Desativado' disabled></td>
+            <td><input class='Desativado' disabled></td>
+            <td><input class='Desativado' disabled></td>
+        </tr>
+        <tr>
+            <td><input class='Desativado' placeholder='11.' disabled></td>
+            <td><input type="text" id='Campo43' onkeyup="verifica(10)" maxlength="1"></td>
+            <td><input type="text" id='Campo44' onkeyup="verifica(10); verifica(15)" maxlength="1"></td>
+            <td><input type="text" id='Campo45' onkeyup="verifica(8); verifica(10)" maxlength="1"></td>
+            <td><input type="text" id='Campo46' onkeyup="verifica(10)" maxlength="1"></td>
+            <td><input type="text" id='Campo47' onkeyup="verifica(10)" maxlength="1"></td>
+            <td><input type="text" id='Campo48' onkeyup="verifica(10)" maxlength="1"></td>
+            <td><input type="text" id='Campo49' onkeyup="verifica(2); verifica(10)" maxlength="1"></td>
+            <td><input class='Desativado' disabled></td>
+            <td><input class='Desativado' disabled></td>
+            <td><input class='Desativado' disabled></td>
+            <td><input class='Desativado' disabled></td>
+            <td><input class='Desativado' disabled></td>
+            <td><input class='Desativado' disabled></td>
+        </tr>
+        <tr>
+            <td><input class='Desativado' disabled></td>
+            <td><input class='Desativado' disabled></td>
+            <td><input class='Desativado' disabled></td>
+            <td><input type="text" id='Campo50' onkeyup="verifica(8)" maxlength="1"></td>
+            <td><input class='Desativado' disabled></td>
+            <td><input class='Desativado' disabled></td>
+            <td><input class='Desativado' disabled></td>
+            <td><input class='Desativado' disabled></td>
+            <td><input class='Desativado' disabled></td>
+            <td><input class='Desativado' disabled></td>
+            <td><input class='Desativado' disabled></td>
+            <td><input class='Desativado' disabled></td>
+            <td><input class='Desativado' disabled></td>
+            <td><input class='Desativado' disabled></td>
+        </tr>
+        <tr>
+            <td><input class='Desativado' placeholder='7.' disabled></td>
+            <td><input type="text" id='Campo51' onkeyup="verifica(6)" maxlength="1"></td>
+            <td><input type="text" id='Campo52' onkeyup="verifica(6)" maxlength="1"></td>
+            <td><input type="text" id='Campo53' onkeyup="verifica(6); verifica(8)" maxlength="1"></td>
+            <td><input type="text" id='Campo54' onkeyup="verifica(6)" maxlength="1"></td>
+            <td><input type="text" id='Campo55' onkeyup="verifica(6)" maxlength="1"></td>
+            <td><input class='Desativado' disabled></td>
+            <td><input class='Desativado' disabled></td>
+            <td><input class='Desativado' disabled></td>
+            <td><input class='Desativado' disabled></td>
+            <td><input class='Desativado' disabled></td>
+            <td><input class='Desativado' disabled></td>
+            <td><input class='Desativado' disabled></td>
+            <td><input class='Desativado' disabled></td>
+        </tr>
+        <tr>
+            <td><input class='Desativado' disabled></td>
+            <td><input class='Desativado' disabled></td>
+            <td><input class='Desativado' disabled></td>
+            <td><input class='Desativado' disabled></td>
+            <td><input class='Desativado' disabled></td>
+            <td><input class='Desativado' disabled></td>
+            <td><input class='Desativado' disabled></td>
+            <td><input class='Desativado' disabled></td>
+            <td><input class='Desativado' disabled></td>
+            <td><input class='Desativado' disabled></td>
+            <td><input class='Desativado' disabled></td>
+            <td><input class='Desativado' disabled></td>
+            <td><input class='Desativado' disabled></td>
+            <td><input class='Desativado' disabled></td>
+        </tr>
+        <div class="Perguntas">
+            <span id='P1'>1)Ele é o principal item de hardware do computador.</span><br><br>
+            <span id='P2'>2)É um circuito digital que realiza operações de adição e booleana AND.</span><br><br>
+            <span id='P3'>3)É a memória dentro da própria CPU que armazena n bits.</span><br><br>
+            <span id='P4'>4)O processador armazena os dados com os quais está lidando.</span><br><br>
+            <span id='P5'>5)Os dados são gravados nelas apenas uma vez.</span><br><br>
+            <span id='P6'>6)A capacidade de permitir que dados sejam regravados no dispositivo.</span><br><br>
+            <span id='P7'>7)O processo de gravação (e regravação) é muito mais rápido.</span><br><br>
+            <span id='P8'>8)Tem como função armazenar grandes quantidades de informações.</span><br><br>
+            <span id='P9'>9)Permite que certos dispositivos de hardware num computador acessem a memória do sistema para
+                leitura e escrita independentemente da CPU.</span><br><br>
+            <span id='P10'>10)Tambem chamado de slave select.</span><br><br>
+            <span id='P11'>11)É a via elétrica usada para transferir dados entre componentes de um
+                computador.</span><br><br>
+            <span id='P12'>12)É usado para transferir dados entre dispositivos.</span><br><br>
+            <span id='P13'>13)CPU de uso Intermediário da intel.</span><br><br>
+            <span id='P14'>14)CPU de uso Avançado da intel.</span><br><br>
+            <span id='P15'>15)Processadores com 2 núcleos.</span><br><br>
+            <span id='P16'>16)Processadores com 4 ou mais núcleos.</span><br><br>
+        </div>
+
+    </table>
+</body>
+
+</html>
+
+<style>
+    input {
+        margin: 0;
+        width: 30px;
+        height: 30px;
+        padding: 0;
+        text-transform: uppercase;
+        font-size: 15px;
+        text-align: center;
+        border: solid black;
+    }
+
+    input::placeholder {
+        font-size: 10px;
+        color: white;
+        font-weight: bolder;
+    }
+
+    input:disabled {
+        color: white;
+        background-color: #232323;
+    }
+
+    td {
+        float: left;
+    }
+
+    * {
+        margin: 0;
+    }
+
+    table {
+        float: left;
+        margin-left: 100px;
+        margin-top: 80px;
+    }
+
+    .Perguntas {
+        margin-top: 80px;
+        width: 450px;
+        float: right;
+        font-size: 17px;
+        margin-right: 100px;
+        color: white;
+        font-weight: bolder;
+    }
+
+    .Desativado {
+        background-color: #232323;
+    }
+
+    body {
+        background-color: #00688b;
+    }
+
+    h1 {
+        margin-top: 30px;
+        color: white;
+        font-weight: bolder;
+        text-align: center;
+    }
+</style>
+
+<script>
+
+    function verifica(Numero) {
+        switch (Numero) {
+            case 0:
+                var CPU = (Campo24.value + Campo25.value + Campo26.value).toUpperCase();
+                if (CPU == 'CPU') {
+                    Campo24.disabled = true;
+                    Campo25.disabled = true;
+                    Campo26.disabled = true;
+                    Campo24.style = 'border: solid #698b22;';
+                    Campo25.style = 'border: solid #698b22;';
+                    Campo26.style = 'border: solid #698b22;';
+                    P1.style = 'color: #9acd32';
+                }
+                break;
+            case 1:
+                var ULA = (Campo3.value + Campo6.value + Campo13.value).toUpperCase();
+                if (ULA == 'ULA') {
+                    Campo3.disabled = true;
+                    Campo6.disabled = true;
+                    Campo13.disabled = true;
+                    Campo3.style = 'border: solid #698b22;';
+                    Campo6.style = 'border: solid #698b22;';
+                    Campo13.style = 'border: solid #698b22;';
+                    P2.style = 'color: #9acd32';
+                }
+                break;
+            case 2:
+                var REGISTRADORES = (Campo4.value + Campo8.value + Campo14.value + Campo17.value +
+                    Campo19.value + Campo22.value + Campo27.value + Campo30.value + Campo32.value +
+                    Campo35.value + Campo38.value + Campo42.value + Campo49.value).toUpperCase();
+                if (REGISTRADORES == 'REGISTRADORES') {
+                    Campo4.disabled = true;
+                    Campo8.disabled = true;
+                    Campo14.disabled = true;
+                    Campo17.disabled = true;
+                    Campo19.disabled = true;
+                    Campo22.disabled = true;
+                    Campo27.disabled = true;
+                    Campo30.disabled = true;
+                    Campo32.disabled = true;
+                    Campo35.disabled = true;
+                    Campo38.disabled = true;
+                    Campo42.disabled = true;
+                    Campo49.disabled = true;
+                    Campo4.style = "border: solid #698b22;";
+                    Campo8.style = "border: solid #698b22;";
+                    Campo14.style = "border: solid #698b22;";
+                    Campo17.style = "border: solid #698b22;";
+                    Campo19.style = "border: solid #698b22;";
+                    Campo22.style = "border: solid #698b22;";
+                    Campo27.style = "border: solid #698b22;";
+                    Campo30.style = "border: solid #698b22;";
+                    Campo32.style = "border: solid #698b22;";
+                    Campo35.style = "border: solid #698b22;";
+                    Campo38.style = "border: solid #698b22;";
+                    Campo42.style = "border: solid #698b22;";
+                    Campo49.style = "border: solid #698b22;";
+                    P3.style = 'color: #9acd32';
+                }
+                break;
+            case 3:
+                var RAM = (Campo33.value + Campo36.value + Campo40.value).toUpperCase();
+                if (RAM == 'RAM') {
+                    Campo33.disabled = true;
+                    Campo36.disabled = true;
+                    Campo40.disabled = true;
+                    Campo33.style = 'border: solid #698b22;';
+                    Campo36.style = 'border: solid #698b22;';
+                    Campo40.style = 'border: solid #698b22;';
+                    P4.style = 'color: #9acd32';
+                }
+                break;
+            case 4:
+                var ROM = (Campo38.value + Campo39.value + Campo40.value).toUpperCase();
+                if (ROM == 'ROM') {
+                    Campo38.disabled = true;
+                    Campo39.disabled = true;
+                    Campo40.disabled = true;
+                    Campo38.style = 'border: solid #698b22;';
+                    Campo39.style = 'border: solid #698b22;';
+                    Campo40.style = 'border: solid #698b22;';
+                    P5.style = 'color: #9acd32';
+                }
+                break;
+            case 5:
+                var EPROM = (Campo1.value + Campo2.value + Campo5.value + Campo10.value + Campo15.value).toUpperCase();
+                if (EPROM == 'EPROM') {
+                    Campo1.disabled = true;
+                    Campo2.disabled = true;
+                    Campo5.disabled = true;
+                    Campo10.disabled = true;
+                    Campo15.disabled = true;
+                    Campo1.style = 'border: solid #698b22;';
+                    Campo2.style = 'border: solid #698b22;';
+                    Campo5.style = 'border: solid #698b22;';
+                    Campo10.style = 'border: solid #698b22;';
+                    Campo15.style = 'border: solid #698b22;';
+                    P6.style = 'color: #9acd32';
+                }
+                break;
+            case 6:
+                var FLASH = (Campo51.value + Campo52.value + Campo53.value + Campo54.value + Campo55.value).toUpperCase();
+                if (FLASH == 'FLASH') {
+                    Campo51.disabled = true;
+                    Campo52.disabled = true;
+                    Campo53.disabled = true;
+                    Campo54.disabled = true;
+                    Campo55.disabled = true;
+                    Campo51.style = 'border: solid #698b22;';
+                    Campo52.style = 'border: solid #698b22;';
+                    Campo53.style = 'border: solid #698b22;';
+                    Campo54.style = 'border: solid #698b22;';
+                    Campo55.style = 'border: solid #698b22;';
+                    P7.style = 'color: #9acd32';
+                }
+                break;
+            case 7:
+                var MEMORIA = (Campo7.value + Campo8.value + Campo9.value + Campo10.value +
+                    Campo11.value + Campo12.value + Campo13.value).toUpperCase();
+                if (MEMORIA == 'MEMORIA') {
+                    Campo7.disabled = true;
+                    Campo8.disabled = true;
+                    Campo9.disabled = true;
+                    Campo10.disabled = true;
+                    Campo11.disabled = true;
+                    Campo12.disabled = true;
+                    Campo13.disabled = true;
+                    Campo7.style = "border: solid #698b22;"
+                    Campo8.style = "border: solid #698b22;"
+                    Campo9.style = "border: solid #698b22;"
+                    Campo10.style = "border: solid #698b22;"
+                    Campo11.style = "border: solid #698b22;"
+                    Campo12.style = "border: solid #698b22;"
+                    Campo13.style = "border: solid #698b22;"
+                    P8.style = 'color: #9acd32';
+                }
+                break;
+            case 8:
+                var DMA = (Campo45.value + Campo50.value + Campo53.value).toUpperCase();
+                if (DMA == 'DMA') {
+                    Campo45.disabled = true;
+                    Campo50.disabled = true;
+                    Campo53.disabled = true;
+                    Campo45.style = 'border: solid #698b22;';
+                    Campo50.style = 'border: solid #698b22;';
+                    Campo53.style = 'border: solid #698b22;';
+                    P9.style = 'color: #9acd32';
+                }
+                break;
+            case 9:
+                var CS = (Campo24.value + Campo28.value).toUpperCase();
+                if (CS == 'CS') {
+                    Campo24.disabled = true;
+                    Campo28.disabled = true;
+                    Campo24.style = 'border: solid #698b22;';
+                    Campo28.style = 'border: solid #698b22;';
+                    P10.style = 'color: #9acd32';
+                }
+                break;
+            case 10:
+                var ADDRESS = (Campo43.value + Campo44.value + Campo45.value + Campo46.value +
+                    Campo47.value + Campo48.value + Campo49.value).toUpperCase();
+                if (ADDRESS == 'ADDRESS') {
+                    Campo43.disabled = true;
+                    Campo44.disabled = true;
+                    Campo45.disabled = true;
+                    Campo46.disabled = true;
+                    Campo47.disabled = true;
+                    Campo48.disabled = true;
+                    Campo49.disabled = true;
+                    Campo43.style = "border: solid #698b22;"
+                    Campo44.style = "border: solid #698b22;"
+                    Campo45.style = "border: solid #698b22;"
+                    Campo46.style = "border: solid #698b22;"
+                    Campo47.style = "border: solid #698b22;"
+                    Campo48.style = "border: solid #698b22;"
+                    Campo49.style = "border: solid #698b22;"
+                    P11.style = 'color: #9acd32';
+                }
+                break;
+            case 11:
+                var DATA = (Campo20.value + Campo21.value + Campo22.value + Campo23.value).toUpperCase();
+                if (DATA == 'DATA') {
+                    Campo20.disabled = true;
+                    Campo21.disabled = true;
+                    Campo22.disabled = true;
+                    Campo23.disabled = true;
+                    Campo20.style = 'border: solid #698b22;';
+                    Campo21.style = 'border: solid #698b22;';
+                    Campo22.style = 'border: solid #698b22;';
+                    Campo23.style = 'border: solid #698b22;';
+                    P12.style = 'color: #9acd32';
+                }
+                break;
+            case 12:
+                var I5 = (Campo17.value + Campo18.value).toUpperCase();
+                if (I5 == 'I5') {
+                    Campo17.disabled = true;
+                    Campo18.disabled = true;
+                    Campo17.style = 'border: solid #698b22;';
+                    Campo18.style = 'border: solid #698b22;';
+                    P13.style = 'color: #9acd32';
+                }
+                break;
+            case 13:
+                var I7 = (Campo12.value + Campo16.value).toUpperCase();
+                if (I7 == 'I7') {
+                    Campo12.disabled = true;
+                    Campo16.disabled = true;
+                    Campo12.style = 'border: solid #698b22;';
+                    Campo16.style = 'border: solid #698b22;';
+                    P14.style = 'color: #9acd32';
+                }
+                break;
+            case 14:
+                var DUAL = (Campo20.value + Campo26.value + Campo29.value + Campo31.value).toUpperCase();
+                if (DUAL == 'DUAL') {
+                    Campo20.disabled = true;
+                    Campo26.disabled = true;
+                    Campo29.disabled = true;
+                    Campo31.disabled = true;
+                    Campo20.style = 'border: solid #698b22;';
+                    Campo26.style = 'border: solid #698b22;';
+                    Campo29.style = 'border: solid #698b22;';
+                    Campo31.style = 'border: solid #698b22;';
+                    P15.style = 'color: #9acd32';
+                }
+                break;
+            case 15:
+                var QUAD = (Campo34.value + Campo37.value + Campo41.value + Campo44.value).toUpperCase();
+                if (QUAD == 'QUAD') {
+                    Campo34.disabled = true;
+                    Campo37.disabled = true;
+                    Campo41.disabled = true;
+                    Campo44.disabled = true;
+                    Campo34.style = 'border: solid #698b22;';
+                    Campo37.style = 'border: solid #698b22;';
+                    Campo41.style = 'border: solid #698b22;';
+                    Campo44.style = 'border: solid #698b22;';
+                    P16.style = 'color: #9acd32';
+                }
+                break;
+        }
+    }
+</script>

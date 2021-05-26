@@ -1,0 +1,896 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cruzadinha</title>
+</head>
+
+<body>
+    <h1>Cruzadinha</h1>
+    <table>
+        <tr>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' placeholder='2.' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+        </tr>
+        <tr>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input type="text" id='letra1' onkeyup="resposta(1)" maxlength="1"></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' placeholder='10.' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+        </tr>
+        <tr>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input type="text" id='letra2' onkeyup="resposta(1)" maxlength="1"></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' placeholder='12.' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input type="text" id='letra3' onkeyup="resposta(9)" maxlength="1"></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+        </tr>
+        <tr>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' placeholder='11.' disabled></td>
+            <td><input type="text" id='letra4' onkeyup="resposta(1); resposta(10)" maxlength="1"></td>
+            <td><input type="text" id='letra5' onkeyup="resposta(10)" maxlength="1"></td>
+            <td><input type="text" id='letra6' onkeyup="resposta(10); resposta(11)" maxlength="1"></td>
+            <td><input type="text" id='letra7' onkeyup="resposta(10)" maxlength="1"></td>
+            <td><input type="text" id='letra8' onkeyup="resposta(10)" maxlength="1"></td>
+            <td><input type="text" id='letra9' onkeyup="resposta(10)" maxlength="1"></td>
+            <td><input type="text" id='letra10' onkeyup="resposta(10)" maxlength="1"></td>
+            <td><input type="text" id='letra11' onkeyup="resposta(10)" maxlength="1"></td>
+            <td><input type="text" id='letra12' onkeyup="resposta(10)" maxlength="1"></td>
+            <td><input type="text" id='letra13' onkeyup="resposta(10)" maxlength="1"></td>
+            <td><input type="text" id='letra14' onkeyup="resposta(10); resposta(9)" maxlength="1"></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+        </tr>
+        <tr>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input type="text" id='letra15' onkeyup="resposta(11)" maxlength="1"></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' placeholder="13." disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+        </tr>
+        <tr>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' placeholder="4." disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input type="text" id='letra16' onkeyup="resposta(11)" maxlength="1"></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' placeholder="1." disabled></td>
+            <td><input type="text" id='letra17' onkeyup="resposta(0); resposta(12)" maxlength="1"></td>
+            <td><input type="text" id='letra18' onkeyup="resposta(0)" maxlength="1"></td>
+            <td><input type="text" id='letra19' onkeyup="resposta(0)" maxlength="1"></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+        </tr>
+        <tr>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' placeholder="9." disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input type="text" id='letra20' onkeyup="resposta(3)" maxlength="1"></td>
+            <td><input class='vazio' disabled></td>
+            <td><input type="text" id='letra21' onkeyup="resposta(11)" maxlength="1"></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input type="text" id='letra22' onkeyup="resposta(12)" maxlength="1"></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+        </tr>
+        <tr>
+            <td><input class='vazio' placeholder="15." disabled></td>
+            <td><input type="text" id='letra23' onkeyup="resposta(8); resposta(14)" maxlength="1"></td>
+            <td><input type="text" id='letra24' onkeyup="resposta(14)" maxlength="1"></td>
+            <td><input type="text" id='letra25' onkeyup="resposta(3); resposta(14)" maxlength="1"></td>
+            <td><input type="text" id='letra26' onkeyup="resposta(14)" maxlength="1"></td>
+            <td><input type="text" id='letra27' onkeyup="resposta(11); resposta(14)" maxlength="1"></td>
+            <td><input type="text" id='letra28' onkeyup="resposta(14)" maxlength="1"></td>
+            <td><input type="text" id='letra29' onkeyup="resposta(14)" maxlength="1"></td>
+            <td><input type="text" id='letra30' onkeyup="resposta(12); resposta(14)" maxlength="1"></td>
+            <td><input type="text" id='letra31' onkeyup="resposta(14)" maxlength="1"></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' placeholder="8." disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+        </tr>
+        <tr>
+            <td><input class='vazio' disabled></td>
+            <td><input type="text" id='letra32' onkeyup="resposta(8)" maxlength="1"></td>
+            <td><input class='vazio' disabled></td>
+            <td><input type="text" id='letra33' onkeyup="resposta(3)" maxlength="1"></td>
+            <td><input class='vazio' disabled></td>
+            <td><input type="text" id='letra34' onkeyup="resposta(11)" maxlength="1"></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input type="text" id='letra35' onkeyup="resposta(12)" maxlength="1"></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input type="text" id='letra36' onkeyup="resposta(7)" maxlength="1"></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+        </tr>
+        <tr>
+            <td><input class='vazio' disabled></td>
+            <td><input type="text" id='letra37' onkeyup="resposta(8)" maxlength="1"></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' placeholder="16." disabled></td>
+            <td><input type="text" id='letra38' onkeyup="resposta(15)" maxlength="1"></td>
+            <td><input type="text" id='letra39' onkeyup="resposta(11); resposta(15)" maxlength="1"></td>
+            <td><input type="text" id='letra40' onkeyup="resposta(15)" maxlength="1"></td>
+            <td><input type="text" id='letra41' onkeyup="resposta(15)" maxlength="1"></td>
+            <td><input type="text" id='letra42' onkeyup="resposta(12); resposta(15)" maxlength="1"></td>
+            <td><input type="text" id='letra43' onkeyup="resposta(15)" maxlength="1"></td>
+            <td><input type="text" id='letra44' onkeyup="resposta(15)" maxlength="1"></td>
+            <td><input type="text" id='letra45' onkeyup="resposta(15)" maxlength="1"></td>
+            <td><input type="text" id='letra46' onkeyup="resposta(7); resposta(15)" maxlength="1"></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+        </tr>
+        <tr>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input type="text" id='letra47' onkeyup="resposta(11)" maxlength="1"></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input type="text" id='letra48' onkeyup="resposta(12)" maxlength="1"></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input type="text" id='letra49' onkeyup="resposta(7)" maxlength="1"></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+        </tr>
+        <tr>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' placeholder="14." disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input type="text" id='letra50' onkeyup="resposta(12)" maxlength="1"></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input type="text" id='letra51' onkeyup="resposta(7)" maxlength="1"></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+        </tr>
+        <tr>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input type="text" id='letra52' onkeyup="resposta(13)" maxlength="1"></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' placeholder="5." disabled></td>
+            <td><input type="text" id='letra53' onkeyup="resposta(4); resposta(7)" maxlength="1"></td>
+            <td><input type="text" id='letra54' onkeyup="resposta(4)" maxlength="1"></td>
+            <td><input type="text" id='letra55' onkeyup="resposta(4)" maxlength="1"></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+        </tr>
+        <tr>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input type="text" id='letra56' onkeyup="resposta(13)" maxlength="1"></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input type="text" id='letra57' onkeyup="resposta(7)" maxlength="1"></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+        </tr>
+        <tr>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' placeholder="3." disabled></td>
+            <td><input type="text" id='letra58' onkeyup="resposta(2); resposta(13)" maxlength="1"></td>
+            <td><input type="text" id='letra59' onkeyup="resposta(2)" maxlength="1"></td>
+            <td><input type="text" id='letra60' onkeyup="resposta(2)" maxlength="1"></td>
+            <td><input type="text" id='letra61' onkeyup="resposta(2)" maxlength="1"></td>
+            <td><input type="text" id='letra62' onkeyup="resposta(2)" maxlength="1"></td>
+            <td><input type="text" id='letra63' onkeyup="resposta(2)" maxlength="1"></td>
+            <td><input type="text" id='letra64' onkeyup="resposta(2)" maxlength="1"></td>
+            <td><input type="text" id='letra65' onkeyup="resposta(2);resposta(7)" maxlength="1"></td>
+            <td><input type="text" id='letra66' onkeyup="resposta(2)" maxlength="1"></td>
+            <td><input type="text" id='letra67' onkeyup="resposta(2)" maxlength="1"></td>
+            <td><input type="text" id='letra68' onkeyup="resposta(2)" maxlength="1"></td>
+            <td><input type="text" id='letra69' onkeyup="resposta(2)" maxlength="1"></td>
+            <td><input type="text" id='letra70' onkeyup="resposta(2)" maxlength="1"></td>
+            <td><input class='vazio' disabled></td>
+        </tr>
+        <tr>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input type="text" id='letra71' onkeyup="resposta(13)" maxlength="1"></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input type="text" id='letra72' onkeyup="resposta(7)" maxlength="1"></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+        </tr>
+        <tr>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input type="text" id='letra73' onkeyup="resposta(13)" maxlength="1"></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input type="text" id='letra74' onkeyup="resposta(7)" maxlength="1"></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+        </tr>
+        <tr>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input type="text" id='letra75' onkeyup="resposta(13)" maxlength="1"></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input type="text" id='letra76' onkeyup="resposta(7)" maxlength="1"></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+        </tr>
+        <tr>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input type="text" id='letra77' onkeyup="resposta(13)" maxlength="1"></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input type="text" id='letra78' onkeyup="resposta(7)" maxlength="1"></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+        </tr>
+        <tr>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' placeholder="6." disabled></td>
+            <td><input type="text" id='letra79' onkeyup="resposta(5)" maxlength="1"></td>
+            <td><input type="text" id='letra80' onkeyup="resposta(5)" maxlength="1"></td>
+            <td><input type="text" id='letra81' onkeyup="resposta(5)" maxlength="1"></td>
+            <td><input type="text" id='letra82' onkeyup="resposta(5)" maxlength="1"></td>
+            <td><input type="text" id='letra83' onkeyup="resposta(5); resposta(7)" maxlength="1"></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+        </tr>
+        <tr>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input type="text" id='letra84' onkeyup="resposta(7)" maxlength="1"></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+        </tr>
+        <tr>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' placeholder="7." disabled></td>
+            <td><input type="text" id='letra85' onkeyup="resposta(6)" maxlength="1"></td>
+            <td><input type="text" id='letra86' onkeyup="resposta(6)" maxlength="1"></td>
+            <td><input type="text" id='letra87' onkeyup="resposta(6)" maxlength="1"></td>
+            <td><input type="text" id='letra88' onkeyup="resposta(6); resposta(7)" maxlength="1"></td>
+            <td><input type="text" id='letra89' onkeyup="resposta(6)" maxlength="1"></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+        </tr>
+        <tr>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input type="text" id='letra90' onkeyup="resposta(7)" maxlength="1"></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+        </tr>
+        <tr>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input type="text" id='letra91' onkeyup="resposta(7)" maxlength="1"></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+        </tr>
+        <tr>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+            <td><input class='vazio' disabled></td>
+        </tr>
+        <div class="dicas_esquerda">
+            <span id="dica1">1- É responsável por realizar as instruções de um programa de computador, para executar a aritmética básica, lógica, e a entrada e a saída de dados.</span>
+            <br>
+            <br>
+            <span id="dica2">2- É um circuito digital que realiza operações lógicas e aritméticas, é uma peça fundamental da CPU.</span>
+            <br>
+            <br>
+            <span id="dica3">3- Estão localizados no topo da hierarquia de memória, sendo mais rápidos, porém com menos capacidade de armazenamento.</span>
+            <br>
+            <br>
+            <span id="dica4">4- Permite o acesso aos arquivos armazenados no computador. Ela não armazena conteúdo permanentemente.</span>
+            <br>
+            <br>
+            <span id="dica5">5- Oferece apenas dados para leitura, ou seja, você não pode gravar dados nela.</span>
+            <br>
+            <br>
+            <span id="dica6">6- É um tipo de memória ROM. Sua grande diferença é que nela é permitido a regravação de dados.</span>
+            <br>
+            <br>
+            <span id="dica7">7- É um chip de memória que mantém informações armazenadas sem a necessidade de uma fonte de energia.</span>
+            <br>
+            <br>
+            <span id="dica8">8- Os dados armazenados nela não são perdidos quando desligamos o equipamento.</span>
+            <br>
+            <br>
+        </div>
+
+        <div class="dicas_direita">
+            <span id="dica9">9- É um acrónimo para a expressão em inglês Direct memory access.</span>
+            <br>
+            <br>
+            <span id="dica10">10- É um mecanismo fundamental para permitir à CPU acessar memórias e/ou periféricos externos. (abreviação)</span>
+            <br>
+            <br>
+            <span id="dica11">11- É uma arquitetura de barramento de computador usada para transferir dados entre dispositivos.</span>
+            <br>
+            <br>
+            <span id="dica12">12- É a via elétrica usada para transferir dados entre componentes de um computador.</span>
+            <br>
+            <br>
+            <span id="dica13">13- Processador da Intel que teve seu início de fabricação em setembro de 2009.</span>
+            <br>
+            <br>
+            <span id="dica14">14- Processador da Intel que teve seu início de fabricação em novembro de 2008.</span>
+            <br>
+            <br>
+            <span id="dica15">15- Processadores possuem dois núcleos que trabalham com uma espécie de “divisão de tarefas”.</span>
+            <br>
+            <br>
+            <span id="dica16">16- Um processador que possui quatro núcleos dentro do mesmo CPU, tornando o processamento muito mais rápido.</span>
+            <br>
+            <br>
+        </div>
+</body>
+
+</html>
+
+<style>
+    input {
+        margin: 0;
+        width: 20px;
+        height: 20px;
+        padding: 0;
+        text-transform: uppercase;
+        font-size: 15px;
+        text-align: center;
+        border: solid green;
+    }
+
+    input::placeholder {
+        font-size: 15px;
+        color: white;
+        font-weight: bolder;
+    }
+
+    input:disabled {
+        color: white;
+        background-color: green;
+    }
+
+    * {
+        margin: 0;
+    }
+
+    table {
+        width: 34%;
+        display: flex;
+    }
+
+    .vazio {
+        background-color: green;
+    }
+
+    body {
+        background-color: black;
+    }
+
+    h1 {
+        color: green;
+        font-weight: bolder;
+        text-align: center;
+    }
+
+    div {
+        color: white;
+        font-size: 20px;
+        font-weight: bolder;
+        width: 33%;
+        margin-top: 100px;
+    }
+
+    .dicas_esquerda {
+        float: left;
+        text-align: left;
+    }
+
+    .dicas_direita {
+        float: right;
+        text-align: right;
+    }
+</style>
+
+<script>
+    function resposta(Numero) {
+        switch (Numero) {
+            case 0:
+                var CPU = (letra17.value + letra18.value + letra19.value).toUpperCase();
+                if (CPU == 'CPU') {
+                    letra17.disabled = true;
+                    letra18.disabled = true;
+                    letra19.disabled = true;
+                    dica1.style.color = "green";
+                    dica1.style.textDecoration = "line-through";
+                }
+                break;
+            case 1:
+                var ULA = (letra1.value + letra2.value + letra4.value).toUpperCase();
+                if (ULA == 'ULA') {
+                    letra1.disabled = true;
+                    letra2.disabled = true;
+                    letra4.disabled = true;
+                    dica2.style.color = "green";
+                    dica2.style.textDecoration = "line-through";
+                }
+                break;
+            case 2:
+                var REGISTRADORES = (letra58.value + letra59.value + letra60.value + letra61.value +
+                    letra62.value + letra63.value + letra64.value + letra65.value + letra66.value +
+                    letra67.value + letra68.value + letra69.value + letra70.value).toUpperCase();
+                if (REGISTRADORES == 'REGISTRADORES') {
+                    letra58.disabled = true;
+                    letra59.disabled = true;
+                    letra60.disabled = true;
+                    letra61.disabled = true;
+                    letra62.disabled = true;
+                    letra63.disabled = true;
+                    letra64.disabled = true;
+                    letra65.disabled = true;
+                    letra66.disabled = true;
+                    letra67.disabled = true;
+                    letra68.disabled = true;
+                    letra69.disabled = true;
+                    letra70.disabled = true;
+                    dica3.style.color = "green";
+                    dica3.style.textDecoration = "line-through";
+                }
+                break;
+            case 3:
+                var RAM = (letra20.value + letra25.value + letra33.value).toUpperCase();
+                if (RAM == 'RAM') {
+                    letra20.disabled = true;
+                    letra25.disabled = true;
+                    letra33.disabled = true;
+                    dica4.style.color = "green";
+                    dica4.style.textDecoration = "line-through";
+                }
+                break;
+            case 4:
+                var ROM = (letra53.value + letra54.value + letra55.value).toUpperCase();
+                if (ROM == 'ROM') {
+                    letra53.disabled = true;
+                    letra54.disabled = true;
+                    letra55.disabled = true;
+                    dica5.style.color = "green";
+                    dica5.style.textDecoration = "line-through";
+                }
+                break;
+            case 5:
+                var EPROM = (letra79.value + letra80.value + letra81.value + letra82.value + letra83.value).toUpperCase();
+                if (EPROM == 'EPROM') {
+                    letra79.disabled = true;
+                    letra80.disabled = true;
+                    letra81.disabled = true;
+                    letra82.disabled = true;
+                    letra83.disabled = true;
+                    dica6.style.color = "green";
+                    dica6.style.textDecoration = "line-through";
+                }
+                break;
+            case 6:
+                var FLASH = (letra85.value + letra86.value + letra87.value + letra88.value + letra89.value).toUpperCase();
+                if (FLASH == 'FLASH') {
+                    letra85.disabled = true;
+                    letra86.disabled = true;
+                    letra87.disabled = true;
+                    letra88.disabled = true;
+                    letra89.disabled = true;
+                    dica7.style.color = "green";
+                    dica7.style.textDecoration = "line-through";
+                }
+                break;
+            case 7:
+                var MEMORIA = (letra36.value + letra46.value + letra49.value + letra51.value +
+                    letra53.value + letra57.value + letra65.value + letra74.value + letra76.value
+                    + letra83.value + letra84.value + letra88.value + letra90.value + letra91.value).toUpperCase();
+                if (MEMORIA == 'MEMORIADEMASSA') {
+                    letra36.disabled = true;
+                    letra46.disabled = true;
+                    letra49.disabled = true;
+                    letra51.disabled = true;
+                    letra53.disabled = true;
+                    letra57.disabled = true;
+                    letra65.disabled = true;
+                    letra72.disabled = true;
+                    letra74.disabled = true;
+                    letra76.disabled = true;
+                    letra78.disabled = true;
+                    letra83.disabled = true;
+                    letra84.disabled = true;
+                    letra88.disabled = true;
+                    letra90.disabled = true;
+                    letra91.disabled = true;
+                    dica8.style.color = "green";
+                    dica8.style.textDecoration = "line-through";
+                }
+                break;
+            case 8:
+                var DMA = (letra23.value + letra32.value + letra37.value).toUpperCase();
+                if (DMA == 'DMA') {
+                    letra23.disabled = true;
+                    letra32.disabled = true;
+                    letra37.disabled = true;
+                    dica9.style.color = "green";
+                    dica9.style.textDecoration = "line-through";
+                }
+                break;
+            case 9:
+                var CS = (letra3.value + letra14.value).toUpperCase();
+                if (CS == 'CS') {
+                    letra3.disabled = true;
+                    letra14.disabled = true;
+                    dica10.style.color = "green";
+                    dica10.style.textDecoration = "line-through";
+                }
+                break;
+            case 10:
+                var ADDRESS = (letra4.value + letra5.value + letra6.value + letra7.value +
+                    letra8.value + letra9.value + letra10.value + letra12.value +
+                    letra13.value + letra14.value).toUpperCase();
+                if (ADDRESS == 'ADDRESSBUS') {
+                    letra4.disabled = true;
+                    letra5.disabled = true;
+                    letra6.disabled = true;
+                    letra7.disabled = true;
+                    letra8.disabled = true;
+                    letra9.disabled = true;
+                    letra10.disabled = true;
+                    letra11.disabled = true;
+                    letra12.disabled = true;
+                    letra13.disabled = true;
+                    letra14.disabled = true;
+                    dica11.style.color = "green";
+                    dica11.style.textDecoration = "line-through";
+                }
+                break;
+            case 11:
+                var DATA = (letra6.value + letra15.value + letra16.value + letra21.value + letra34.value
+                    + letra39.value + letra47.value).toUpperCase();
+                if (DATA == 'DATABUS') {
+                    letra6.disabled = true;
+                    letra15.disabled = true;
+                    letra16.disabled = true;
+                    letra21.disabled = true;
+                    letra27.disabled = true;
+                    letra34.disabled = true;
+                    letra39.disabled = true;
+                    letra47.disabled = true;
+                    dica12.style.color = "green";
+                    dica12.style.textDecoration = "line-through";
+                }
+                break;
+            case 12:
+                var I5 = (letra17.value + letra22.value + letra30.value + letra35.value + letra48.value
+                    + letra50.value).toUpperCase();
+                if (I5 == 'COREI5') {
+                    letra17.disabled = true;
+                    letra22.disabled = true;
+                    letra22.disabled = true;
+                    letra30.disabled = true;
+                    letra35.disabled = true;
+                    letra42.disabled = true;
+                    letra48.disabled = true;
+                    letra50.disabled = true;
+                    dica13.style.color = "green";
+                    dica13.style.textDecoration = "line-through";
+                }
+                break;
+            case 13:
+                var I7 = (letra52.value + letra56.value + letra58.value + letra71.value + letra75.value + letra77.value).toUpperCase();
+                if (I7 == 'COREI7') {
+                    letra52.disabled = true;
+                    letra56.disabled = true;
+                    letra58.disabled = true;
+                    letra71.disabled = true;
+                    letra73.disabled = true;
+                    letra75.disabled = true;
+                    letra77.disabled = true;
+                    dica14.style.color = "green";
+                    dica14.style.textDecoration = "line-through";
+                }
+                break;
+            case 14:
+                var DUAL = (letra23.value + letra24.value + letra25.value + letra26.value
+                    + letra28.value + letra29.value + letra30.value + letra31.value).toUpperCase();
+                if (DUAL == 'DUALCORE') {
+                    letra23.disabled = true;
+                    letra24.disabled = true;
+                    letra25.disabled = true;
+                    letra26.disabled = true;
+                    letra27.disabled = true;
+                    letra28.disabled = true;
+                    letra29.disabled = true;
+                    letra30.disabled = true;
+                    letra31.disabled = true;
+                    dica15.style.color = "green";
+                    dica15.style.textDecoration = "line-through";
+                }
+                break;
+            case 15:
+                var QUAD = (letra38.value + letra39.value + letra40.value + letra41.value
+                    + letra43.value + letra44.value + letra45.value + letra46.value).toUpperCase();
+                if (QUAD == 'QUADCORE') {
+                    letra38.disabled = true;
+                    letra39.disabled = true;
+                    letra40.disabled = true;
+                    letra41.disabled = true;
+                    letra42.disabled = true;
+                    letra43.disabled = true;
+                    letra44.disabled = true;
+                    letra45.disabled = true;
+                    letra46.disabled = true;
+                    dica16.style.color = "green";
+                    dica16.style.textDecoration = "line-through";
+                }
+                break;
+        }
+    }
+</script>
