@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="cadastraProduto()">Cadastrar produtos</button>
+    <button onclick="iniciaVenda()">Iniciar nova venda</button>
+    <br>
+    <br>
+    <div id="div_cadastroProduto"></div>
+    <br>
+    <div id="div_notaFiscal"></div>
+</body>
+
+</html>
+
+<script>
+    function cadastraProduto() {
+        div_cadastroProduto.innerHTML = `Código do produto: <input id="in_codigo">
+        <br>
+        Nome do produto: <input id="in_nome">
+        <br>
+        Preço unitário: <input id="in_preco">
+        <br>
+        Quantidade em estoque: <input id="in_estoque">
+        <br>
+        <button onclick="salvaProduto()">Salvar produto</button>`;
+        div_notaFiscal.style.display = "none";
+    }
+
+    var listaCodigo = [];
+    var listaNome = [];
+    var listaPreco = [];
+    var listaEstoque = [];
+
+    function salvaProduto() {
+        for (var contador = 0; contador < listaCodigo.length; contador++) {
+            if (in_codigo.value == listaCodigo[contador]) {
+                var produtoCadastrado = true;
+            }
+        }
+        if (produtoCadastrado) {
+            alert("Produto já cadastrado")
+        } else {
+            listaCodigo.push(in_codigo.value);
+            listaNome.push(in_nome.value);
+            listaPreco.push(Number(in_preco.value));
+            listaEstoque.push(Number(in_estoque.value));
+
+            alert("Produto cadastrado com sucesso");
+        }
+    }
+
+    function iniciaVenda() {
+        div_cadastroProduto.innerHTML = `Código do produto: <input id="in_codigoVenda">
+        <br>
+        Quantidade vendida: <input id="in_qtdVendida">
+        <br>
+        <button onclick="registraVenda()">Registrar venda</button>
+        <br>
+        <button onclick="finalizaVenda()">Finalizar venda</button>`;
+    }
+
+    var listaCodigoProdVendido = [];
+    var listaQtdVendida = [];
+    var posicaoCodigoVenda = 0;
+    var listaPosicaoCodigoVenda = [];
+    var produtoEncontrado = false;
+    var produtoEmEstoque = true;
+
+    function registraVenda() {
+        for (var contador = 0; contador < listaCodigo.length; contador++) {
+            if (in_codigoVenda.value == listaCodigo[contador]) {
+                posicaoCodigoVenda = contador;
+                produtoEncontrado = true;
+            }
+
+            if (Number(in_qtdVendida.value) > listaEstoque[posicaoCodigoVenda] && produtoEncontrado) {
+                produtoEmEstoque = false;
+            } else if (Number(in_qtdVendida.value) <= listaEstoque[posicaoCodigoVenda] && produtoEncontrado) {
+                listaCodigoProdVendido.push(in_codigoVenda.value);
+                listaQtdVendida.push(in_qtdVendida.value);
+                produtoEmEstoque = true;
+                listaPosicaoCodigoVenda.push(posicaoCodigoVenda);
+
+                alert("Venda registrada com sucesso!");
+
+                // diminuindo a quantidade de produto no estoque
+                for (var contador = 0; contador < listaCodigo.length; contador++) {
+                    if (listaCodigo[contador] == in_codigoVenda.value) {
+                        listaEstoque[contador] = listaEstoque[contador] - Number(in_qtdVendida.value);
+                    }
+                }
+            }
+        }
+        if (produtoEncontrado == false) {
+            alert("Produto não encontrado");
+        }
+        if (produtoEmEstoque == false) {
+            alert("Quantidade insuficiente em estoque");
+        }
+    }
+
+    function finalizaVenda() {
+        div_notaFiscal.style.display = "block";
+
+        div_notaFiscal.innerHTML = `Total de vendas: ${listaQtdVendida.length}<br>`;
+
+        for (var contador = 0; contador < listaQtdVendida.length; contador++) {
+            div_notaFiscal.innerHTML += `<br>Produto ${contador + 1}: ${listaNome[listaPosicaoCodigoVenda[contador]]}
+            <br>
+            Valor unitário: R$${listaPreco[listaPosicaoCodigoVenda[contador]]} - Unidades vendidas: ${listaQtdVendida[listaPosicaoCodigoVenda[contador]]}
+            <br>
+            Subtotal: R$${listaPreco[listaPosicaoCodigoVenda[contador]] * listaQtdVendida[listaPosicaoCodigoVenda[contador]]}<br>`;
+        }
+        listaCodigoProdVendido = [];
+        listaQtdVendida = [];
+        posicaoCodigoVenda = 0;
+        listaPosicaoCodigoVenda = [];
+    }
+</script>
+
+<!-- 
+f) (2,5pts) Validações do "Registrar venda": 
+
+  f.1) A quantidade vendida deve ser menor ou igual a quantidade em estoque do produto. Caso contrário exiba um alert: "Quantidade insuficiente em estoque" e não registre a venda;
+
+  f.2) O código do produto informado deve pertencer a algum produto cadastrado. Caso contrário exiba um alert: "Produto não encontrado" e não registre a venda;
+
+
+
+g) (1.5pts) Abaixo, deve haver um botão "Finalizar venda" que: 
+
+  g.2) Ao clicar nele, deve aparecer um mini relatório parecido com uma "nota fiscal", como o exemplo a seguir:
+
+  
+
+    Total de vendas: 3
+
+  
+
+    Produto 1: Mingau de aveia
+
+    Valor unitário: R$ 2,00 - Unidades vendidas: 4
+
+    Subtotal: R$8,00
+
+
+
+    Produto 2: Leite em pó
+
+    Valor unitário: R$ 4,50 - Unidades vendidas: 2
+
+    Subtotal: R$9.00
+
+
+
+    Produto 3: Boneco do Goku
+
+    Valor unitário: R$ 13.00 - Unidades vendidas: 1
+
+    Subtotal: R$13.00
+
+
+
+  g.3) O registro interno de vendas deve ser "zerado". Ou seja, se clicar novamente em "Finalizar venda", não devem mais aparecer as vendas. Aí será necessário fazer novas vendas.
+
+
+
+h) (0,5pts) Caso o usuário clique novamente em "Cadastrar produtos", o formulário de venda some e aparece novamente o formulário de cadastro
+
+
+
+i) (1pts) Adicione uma validação no item c):
+
+  i.2) Não deve existir um produto com o mesmo código já cadastrado (caso exista, exiba "Produto já cadastrado" e NÃO cadastre o produto);
+
+
+
+j) (1pts) Escreva um código "limpo" e organizado - sem variável "cachorro_caramelo" e sem função "funcao1" ;)
+
+#FicaDica: Para encontrar um produto pelo seu código você precisará de um laço de repetição no vetor que guardará os códigos dos produtos e perguntar se o código informado corresponde ao código na X° posição da lista e depois acessar o vetor de produtos nessa mesma posição.
+ -->
