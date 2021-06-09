@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    Insira o nome do país: <input id="in_pais">
+    <br>
+    Insira a população: <input id="in_populacao">
+    <br>
+    Insira o grau de liberdade econômica: <input id="in_grau">
+    <br>
+    <button onclick="cadastraPais()">Cadastrar País</button>
+    <button onclick="analisa()">Analisar</button>
+    <br>
+    <div id="div_analise"></div>
+</body>
+
+</html>
+
+<script>
+    var listaPais = [];
+    var listaPopulacao = [];
+    var listaGrau = [];
+
+    function cadastraPais() {
+        if (Number(in_populacao.value) < 1000 || Number(in_grau.value) < 0 || Number(in_grau.value) > 100) {
+            alert("Valores inválidos!")
+        } else {
+            listaPais.push(in_pais.value);
+            listaPopulacao.push(Number(in_populacao.value));
+            listaGrau.push(Number(in_grau.value));
+            categoria();
+        }
+    }
+
+    var listaCategoria = [];
+    var listaIDH = [];
+    var listaIndice = []
+    var listaDesemprego = [];
+    var listaImagem = []
+
+    function categoria () {
+        if (Number(in_grau.value) > 80 && Number(in_grau.value) <= 100) {
+            listaCategoria.push("Livre");
+            listaIDH.push(0.85);
+            listaIndice.push("5%");
+            listaDesemprego.push((5 / 100) * Number(in_populacao.value));
+            listaImagem.push("https://upload.wikimedia.org/wikipedia/commons/7/7e/MurrayBW.jpg");
+        } else if (Number(in_grau.value) > 70 && Number(in_grau.value) <= 80) {
+            listaCategoria.push("Quase livre");
+            listaIDH.push(0.77);
+            listaIndice.push("7%");
+            listaDesemprego.push((7 / 100) * Number(in_populacao.value));
+            listaImagem.push("https://hsmuniversity.com.br/wp-content/uploads/2020/06/Milton-Friedman.jpg");
+        } else if (Number(in_grau.value) > 60 && Number(in_grau.value) <= 70) {
+            listaCategoria.push("Moderadamente livre");
+            listaIDH.push(0.74);
+            listaIndice.push("8%");
+            listaDesemprego.push((8 / 100) * Number(in_populacao.value));
+            listaImagem.push("https://p2.trrsf.com/image/fget/cf/940/0/images.terra.com/2017/04/04/38-john-maynard-keynes-get.jpg");
+        } else if (Number(in_grau.value) > 50 && Number(in_grau.value) <= 60) {
+            listaCategoria.push("Quase reprimido");
+            listaIDH.push(0.65);
+            listaIndice.push("15%");
+            listaDesemprego.push((15 / 100) * Number(in_populacao.value));
+            listaImagem.push("https://upload.wikimedia.org/wikipedia/commons/9/9a/George_Bernard_Shaw_1934-12-06.jpg");
+        } else {
+            listaCategoria.push("Reprimido");
+            listaIDH.push(0.60);
+            listaIndice.push("22%");
+            listaDesemprego.push((22 / 100) * Number(in_populacao.value));
+            listaImagem.push("https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Karl_Marx_001.jpg/200px-Karl_Marx_001.jpg");
+        }
+    }
+
+    function analisa() {
+        div_analise.innerHTML = "";
+
+        for (var contador = 0; contador < listaPais.length; contador++) {
+            div_analise.innerHTML += `País ${contador + 1} = ${listaPais[contador]}<br>
+            Categoria: ${listaCategoria[contador]}<br>
+            Habitantes: ${listaPopulacao[contador]}<br>
+            IDH médio provável: ${listaIDH[contador]}<br>
+            Desemprego médio provável: ${listaIndice[contador]}, ou seja, talvez ${(listaDesemprego[contador]).toFixed(0)} estejam sem emprego<br>
+            <br>
+            <br>
+            <img src="${listaImagem[contador]}"><br>
+            <br>
+            <br>`;
+        }
+    }
+</script>
+
+<!-- Abaixo das informações de cada país, deve aparecer uma foto, segundo as regras a seguir:
+- Do Murray Rothbard, caso o país seja Livre. -->
